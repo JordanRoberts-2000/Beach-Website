@@ -1,11 +1,12 @@
 import Image from "next/image"
+import Category from "./Components/Category/Category"
 
 export default function Home() {
   return (
     <>
     <main className="w-full lg:h-[100svh] relative">
         <div className="relative h-[30vh] lg:h-full w-full flex">
-            <Image alt="Beach of Pocahontas" fill src="http://res.cloudinary.com/dewhcvhvq/image/upload/v1683129665/urkmys4futdbzl0ufu8e.webp"/>
+            <Image alt="Beach of Pocahontas" priority fill src="http://res.cloudinary.com/dewhcvhvq/image/upload/v1683129665/urkmys4futdbzl0ufu8e.webp" className="object-cover"/>
             <h1 className="ml-2 bottom-0 mb-3 text-xl font-playfairDisplay italic font-[800] absolute lg:top-20 lg:left-[50%] lg:translate-x-[-50%] lg:text-7xl whitespace-nowrap lg:text-center">
                 <span className="lg:hidden">--</span>
                 The Best Beach in the<br className="hidden lg:block"/> Sutton West
@@ -37,56 +38,14 @@ export default function Home() {
     <div>
         <p className="mx-4 mb-8 font-medium lg:block hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At mollitia nisi numquam! Optio nulla eligendi autem! Doloremque, quod, alias laborum quam repellat sint iusto tempore illo quisquam libero possimus quae.</p>
     </div>
-    <section className="pt-4">
+    <section className="py-4">
         <ul className="flex flex-col gap-4 lg:gap-0 ">
-            <li className="w-[95%] lg:w-full aspect-[3/2] lg:aspect-auto lg:h-[50vh] bg-blue-500 mx-auto relative">
-                <Image alt="placeholder" fill src="http://res.cloudinary.com/dewhcvhvq/image/upload/v1683146187/bb93xlmuelfchqw3x4p9.webp"/>
-                <div className="absolute top-0 w-full h-full bg-white/30"></div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col text-center">
-                    <h3 className="text-4xl font-playfairDisplay font-[600] italic">Swimming</h3>
-                    <p className="font-playfairDisplay text-xl">Voloume 1</p>
-                </div>
-            </li>
-            <li className="w-[95%] lg:w-full aspect-[3/2] lg:aspect-auto lg:h-[50vh] bg-blue-500 mx-auto relative">
-                <Image alt="placeholder" fill src="http://res.cloudinary.com/dewhcvhvq/image/upload/v1683146187/bb93xlmuelfchqw3x4p9.webp"/>
-                <div className="absolute top-0 w-full h-full bg-white/30"></div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col text-center">
-                    <h3 className="text-4xl font-playfairDisplay font-[600] italic">Swimming</h3>
-                    <p className="font-playfairDisplay text-xl">Voloume 1</p>
-                </div>
-            </li>
-            <li className="w-[95%] lg:w-full aspect-[3/2] lg:aspect-auto lg:h-[50vh] bg-blue-500 mx-auto relative">
-                <Image alt="placeholder" fill src="http://res.cloudinary.com/dewhcvhvq/image/upload/v1683146187/bb93xlmuelfchqw3x4p9.webp"/>
-                <div className="absolute top-0 w-full h-full bg-white/30"></div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col text-center">
-                    <h3 className="text-4xl font-playfairDisplay font-[600] italic">Swimming</h3>
-                    <p className="font-playfairDisplay text-xl">Voloume 1</p>
-                </div>
-            </li>
-            <li className="w-[95%] lg:w-full aspect-[3/2] lg:aspect-auto lg:h-[50vh] bg-blue-500 mx-auto relative">
-                <Image alt="placeholder" fill src="http://res.cloudinary.com/dewhcvhvq/image/upload/v1683146187/bb93xlmuelfchqw3x4p9.webp"/>
-                <div className="absolute top-0 w-full h-full bg-white/30"></div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col text-center">
-                    <h3 className="text-4xl font-playfairDisplay font-[600] italic">Swimming</h3>
-                    <p className="font-playfairDisplay text-xl">Voloume 1</p>
-                </div>
-            </li>
-            <li className="w-[95%] lg:w-full aspect-[3/2] lg:aspect-auto lg:h-[50vh] bg-blue-500 mx-auto relative">
-                <Image alt="placeholder" fill src="http://res.cloudinary.com/dewhcvhvq/image/upload/v1683146187/bb93xlmuelfchqw3x4p9.webp"/>
-                <div className="absolute top-0 w-full h-full bg-white/30"></div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col text-center">
-                    <h3 className="text-4xl font-playfairDisplay font-[600] italic">Swimming</h3>
-                    <p className="font-playfairDisplay text-xl">Voloume 1</p>
-                </div>
-            </li>
-            <li className="w-[95%] lg:w-full aspect-[3/2] lg:aspect-auto lg:h-[50vh] bg-blue-500 mx-auto relative">
-                <Image alt="placeholder" fill src="http://res.cloudinary.com/dewhcvhvq/image/upload/v1683146187/bb93xlmuelfchqw3x4p9.webp"/>
-                <div className="absolute top-0 w-full h-full bg-white/30"></div>
-                <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col text-center">
-                    <h3 className="text-4xl font-playfairDisplay font-[600] italic">Swimming</h3>
-                    <p className="font-playfairDisplay text-xl">Voloume 1</p>
-                </div>
-            </li>
+            <Category imageUrl={"http://res.cloudinary.com/dewhcvhvq/image/upload/v1683146187/bb93xlmuelfchqw3x4p9.webp"}/>
+            <Category imageUrl={"http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148330/whxzhkab41ho8hcqdt7a.webp"}/>
+            <Category imageUrl={"http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148420/jyxsauxhle4cggngitwt.webp"}/>
+            <Category imageUrl={"http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148518/swlzqta7qefbulqxkz2o.webp"}/>
+            <Category imageUrl={"http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148646/wuruze4x0zayejedrzk3.webp"}/>
+            <Category imageUrl={"http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148732/xamgx1azjqt7mxqnfcyj.webp"}/>
         </ul>
     </section>
     </>
