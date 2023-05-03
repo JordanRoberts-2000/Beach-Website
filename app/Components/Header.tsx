@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className='fixed flex z-50 top-0 w-full pt-4 items-center'>
+    <header className='fixed flex z-50 top-0 w-full py-4 items-center backdrop-blur-sm'>
         {/* Hamburger Menu */}
         <div className='flex flex-col gap-2 ml-2 lg:hidden'>
             <div className='h-[2px] bg-black w-8'></div>
