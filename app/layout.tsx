@@ -1,5 +1,8 @@
 import Header from './Components/Header'
 import './globals.css'
+import { Playfair_Display } from 'next/font/google'
+
+const  playfairDisplay =  Playfair_Display({subsets: ['latin'], weight: ['400','600', '700', '800'],style: ['normal', 'italic'], variable: "--playfairDisplay-font"})
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${playfairDisplay.variable}`}>
       <body>
         <Header/>
         {children}
