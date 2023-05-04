@@ -28,7 +28,7 @@ const InfoSection = ({priceOptions, reviews}: Props) => {
                 </div>
                 {priceOptions.map(({title, included, price}) => (
                     <div key={title} className="flex flex-col gap-2 pl-2 mb-4">
-                        <h5 className="text-3xl bg-black text-white px-4 w-fit pb-1">{title}</h5>
+                        <h5 className="text-3xl bg-black text-white px-4 w-fit">{title}</h5>
                         {included.map((data, index) => (
                             <span key={index} className="text-xl font-playfairDisplay font-[600]">{`- ${data}`}</span>
                         ))}

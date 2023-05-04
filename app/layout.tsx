@@ -1,4 +1,5 @@
 import Header from './Components/Header'
+import ScrollLock from './Components/ScrollLock'
 import './globals.css'
 import { Playfair_Display } from 'next/font/google'
 
@@ -16,10 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${playfairDisplay.variable}`}>
-      <body>
-        <Header/>
-        {children}
-      </body>
+        <ScrollLock>
+            <Header/>
+            {children}
+        </ScrollLock>
     </html>
   )
 }
