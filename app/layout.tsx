@@ -1,3 +1,4 @@
+import Footer from './Components/Footer/Footer'
 import Header from './Components/Header'
 import ScrollLock from './Components/ScrollLock'
 import './globals.css'
@@ -20,6 +21,7 @@ export default function RootLayout({
         <ScrollLock>
             <Header/>
             {children}
+            <Footer/>
         </ScrollLock>
     </html>
   )
