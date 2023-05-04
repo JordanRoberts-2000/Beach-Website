@@ -1,5 +1,6 @@
 import Footer from './Components/Footer/Footer'
-import Header from './Components/Header'
+import Header from './Components/Header/Header'
+import Main from './Components/Main/Main'
 import ScrollLock from './Components/ScrollLock'
 import './globals.css'
 import { Playfair_Display } from 'next/font/google'
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en" className={`${playfairDisplay.variable}`}>
         <ScrollLock>
             <Header/>
+            <Main/>
             {children}
             <Footer/>
         </ScrollLock>

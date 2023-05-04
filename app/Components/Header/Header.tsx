@@ -1,4 +1,4 @@
-import React from 'react'
+import CallToAction from './CallToAction'
 
 const Header = () => {
   return (
@@ -19,7 +19,7 @@ const Header = () => {
                 <li>SWIMMING</li>
             </ul>
         </nav>
-        <button className='bg-black text-white px-8 py-[2px] rounded-md font-bold mr-2 lg:mr-4 ml-auto lg:ml-0'>Book</button>
+        <CallToAction/>
     </header>
   )
 }
