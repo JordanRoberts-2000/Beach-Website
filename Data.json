@@ -42,15 +42,33 @@
         "reviews" : [
             {
                 "stars" : 5,
-                "reviewContent" : "very good",
+                "reviewContent" : "My family and I had an incredible time swimming at this beach! The water was crystal clear, and the waves were perfect for bodyboarding. The sand was clean, and there were plenty of facilities like showers and restrooms. We can't wait to come back!",
                 "reviewer" : "Tim Derunn",
-                "date" : "10/11/2022"
+                "date" : "10/2/2022"
             },
             {
-                "stars" : 4,
-                "reviewContent" : "alright",
-                "reviewer" : "Tim Derunn II",
-                "date" : "10/11/2022"
+                "stars" : 5,
+                "reviewContent" : "I went on a solo swimming trip to this beach, and it was fantastic! The water was refreshing, and there were plenty of spots to swim without worrying about crowds. The beach itself was pristine, and I loved the calm atmosphere. It was the perfect place to relax and recharge.",
+                "reviewer" : "Mary Beth",
+                "date" : "15/4/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "As a family with small children, we were thrilled with this beach for our swimming trip. The shallow water was perfect for the kids to play in, and there were lifeguards on duty, so we felt safe. We also appreciated the playground nearby and the convenient parking. We'll definitely be back!",
+                "reviewer" : "Stephan moore",
+                "date" : "8/5/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "This beach is a hidden gem! It's a bit off the beaten path, but that's what makes it so special. The water is clear and calm, making it an ideal spot for swimming. The sand is soft and clean, and there are plenty of shaded areas to relax in. It's the perfect place to escape the crowds and enjoy a peaceful day at the beach.",
+                "reviewer" : "Philbert Horseman",
+                "date" : "11/5/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I had an amazing swimming trip at this beach! The waves were perfect for surfing, and the water was warm and inviting. The beach was lively, with plenty of people playing beach volleyball and enjoying the sunshine. I also appreciated the nearby restaurants and cafes for when I needed a break from the water. Overall, a fantastic beach experience!",
+                "reviewer" : "Marty Cruise",
+                "date" : "21/8/2022"
             }
         ]
     },
@@ -84,9 +102,33 @@
         "reviews" : [
             {
                 "stars" : 5,
-                "reviewContent" : "very good",
-                "reviewer" : "Tim Derunn",
-                "date" : "10/11/2022"
+                "reviewContent" : "My friends and I had the time of our lives on this parasailing adventure! The staff was professional and friendly, and they made sure we felt comfortable and safe throughout the entire experience. The views from high above the water were breathtaking, and we would definitely recommend this service to anyone looking for a thrilling experience.",
+                "reviewer" : "Sammy Smith",
+                "date" : "22/4/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I'm so glad I decided to try parasailing with this service! The staff was knowledgeable and experienced, and they took the time to explain everything to me before we took off. The ride was smooth and exhilarating, and I loved the feeling of soaring above the water. I would absolutely do it again!",
+                "reviewer" : "Steven Moon",
+                "date" : "10/5/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "This parasailing service exceeded my expectations in every way! The staff was friendly and professional, and they made sure we felt secure the entire time. The views from above were stunning, and it was truly a once-in-a-lifetime experience. I highly recommend this service to anyone looking for a unique and unforgettable adventure.",
+                "reviewer" : "Katelyn Nuine",
+                "date" : "14/7/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I booked a parasailing session for my family, and we had a blast! The staff was patient and accommodating, and they made sure everyone felt comfortable and safe. The ride itself was amazing - we loved the feeling of floating above the water and taking in the beautiful scenery. It was definitely a highlight of our vacation.",
+                "reviewer" : "Ben Hoppins",
+                "date" : "12/11/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I can't recommend this parasailing service enough! The staff was friendly and knowledgeable, and they went above and beyond to ensure we had a great time. The equipment was top-notch, and we felt completely secure throughout the ride. The views were spectacular, and it was an experience we'll never forget.",
+                "reviewer" : "Amber Louis",
+                "date" : "01/12/2022"
             }
         ]
     },
@@ -96,33 +138,88 @@
         "imageUrl" : "http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148420/jyxsauxhle4cggngitwt.webp",
         "priceOptions" : [
             {
-                "title" : "Single",
+                "title" : "Single - 1 Hour",
+                "price" : 40,
+                "included" : [
+                    "borrow 1 Surfboard"
+                ]
+            },
+            {
+                "title" : "Single - 90 Mins",
+                "price" : 70,
+                "included" : [
+                    "borrow 1 Surfboard"
+                ]
+            },
+            {
+                "title" : "Family - 1 Hour",
                 "price" : 90,
                 "included" : [
-                    "30 min Parasailing ride"
+                    "2 Adult Surfboards",
+                    "Any many child boards requied"
                 ]
             },
             {
-                "title" : "2 People",
-                "price" : 170,
+                "title" : "Family - 90 Mins",
+                "price" : 140,
                 "included" : [
-                    "30 min Parasailing ride"
+                    "2 Adult Surfboards",
+                    "Any many child boards requied"
                 ]
             },
             {
-                "title" : "3 People",
-                "price" : 240,
+                "title" : "Beginner Lessons",
+                "price" : 80,
                 "included" : [
-                    "30 min Parasailing ride"
+                    "one 60min session",
+                    "borrow 1 Surfboard",
+                    "An Instructor",
+                    "Private beach area",
+                    "Learn to ride"
+                ]
+            },
+            {
+                "title" : "Intermediate Lessons",
+                "price" : 80,
+                "included" : [
+                    "one 60min session",
+                    "borrow 1 Surfboard",
+                    "An Instructor",
+                    "Private beach area",
+                    "Learn advanced techniques and tricks"
                 ]
             }
         ],
         "reviews" : [
             {
                 "stars" : 5,
-                "reviewContent" : "very good",
-                "reviewer" : "Tim Derunn",
-                "date" : "10/11/2022"
+                "reviewContent" : "I took surfing lessons with this service, and it was an incredible experience! The instructor was patient and knowledgeable, and he helped me improve my skills quickly. The waves were perfect for beginners, and I felt safe and confident throughout the entire lesson. I can't wait to come back and surf again!",
+                "reviewer" : "Amy Good",
+                "date" : "06/01/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I've been surfing for years, and this beach is one of my favorites! The waves are consistent and challenging, and the scenery is stunning. The locals are friendly and welcoming, and the vibe is laid-back and fun. I highly recommend this spot to any experienced surfers looking for a great ride.",
+                "reviewer" : "Phil Robert",
+                "date" : "22/05/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I booked a surfing lesson for my kids, and they had a blast! The instructor was great with kids, and he made the lesson fun and informative. The waves were perfect for beginners, and my kids improved their skills in just one lesson. We'll definitely be back!",
+                "reviewer" : "Sara Benz",
+                "date" : "30/06/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I visited this beach specifically for the surfing, and I wasn't disappointed! The waves were powerful and thrilling, and the atmosphere was electric. The locals were passionate about surfing, and I loved the energy of the beach. I would definitely recommend this spot to any experienced surfers looking for a challenge.",
+                "reviewer" : "Joshua Collins Sinclar",
+                "date" : "10/09/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I took a group surfing lesson with this service, and it was a fantastic experience! The instructor was patient and friendly, and he helped everyone in the group improve their skills. The waves were perfect for beginners, and we all had a great time. I would highly recommend this service to anyone looking to try surfing for the first time.",
+                "reviewer" : "Grace Brody",
+                "date" : "10/10/2022"
             }
         ]
     },
@@ -132,33 +229,72 @@
         "imageUrl" : "http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148518/swlzqta7qefbulqxkz2o.webp",
         "priceOptions" : [
             {
-                "title" : "Single",
+                "title" : "Single - 1 Hour",
                 "price" : 90,
                 "included" : [
-                    "30 min Parasailing ride"
+                    "Ride the waves",
+                    "Accompanied by Jet Ski staff"
                 ]
             },
             {
-                "title" : "2 People",
-                "price" : 170,
+                "title" : "Single - 90 Mins",
+                "price" : 130,
                 "included" : [
-                    "30 min Parasailing ride"
+                    "Ride the waves",
+                    "Accompanied by Jet Ski staff"
                 ]
             },
             {
-                "title" : "3 People",
-                "price" : 240,
+                "title" : "Family - 1 Hour",
+                "price" : 150,
                 "included" : [
-                    "30 min Parasailing ride"
+                    "Ride the waves",
+                    "Accompanied by Jet Ski staff",
+                    "Up to 5 Jet Skis per Family",
+                    "Ride in calmer waters"
+                ]
+            },
+            {
+                "title" : "Family - 90 Mins",
+                "price" : 210,
+                "included" : [
+                    "Ride the waves",
+                    "Accompanied by Jet Ski staff",
+                    "Up to 5 Jet Skis per Family",
+                    "Ride in calmer waters"
                 ]
             }
         ],
         "reviews" : [
             {
                 "stars" : 5,
-                "reviewContent" : "very good",
-                "reviewer" : "Tim Derunn",
-                "date" : "10/11/2022"
+                "reviewContent" : "My friends and I had a blast on our jet ski ride at the beach! The staff was friendly and professional, and they gave us a thorough safety briefing before we took off. The water was calm and inviting, and we loved feeling the wind in our hair as we zipped across the waves. We would definitely do it again!",
+                "reviewer" : "Jamie Lanister",
+                "date" : "10/03/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I went on a solo jet ski ride at the beach, and it was so much fun! The staff was knowledgeable and helpful, and they made sure I felt comfortable before I took off. The water was perfect for jet skiing - just the right amount of choppy - and the scenery was beautiful. It was a great way to spend an afternoon!",
+                "reviewer" : "Jim Diaz",
+                "date" : "12/05/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I took my family on a jet ski ride at the beach, and we all had a great time! The staff was friendly and patient, and they made sure everyone felt safe and secure before we took off. The water was warm and inviting, and we loved feeling the rush of the wind and waves. It was definitely a highlight of our vacation.",
+                "reviewer" : "Cameron Morton",
+                "date" : "09/07/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I booked a jet ski ride with this service, and I was impressed by their attention to detail. The staff took the time to explain everything to me and made sure I was comfortable before I took off. The water was perfect for jet skiing - not too rough, but still thrilling - and I loved the feeling of being out on the open water. I would definitely recommend this service to anyone looking for a fun and safe adventure.",
+                "reviewer" : "Xander Dyer",
+                "date" : "10/07/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I'm a seasoned jet skier, and I can confidently say that this beach is one of the best spots for jet skiing! The water is clear and calm, and there's plenty of space to ride without worrying about crowds. The staff was knowledgeable and accommodating, and they made sure I had everything I needed for a great ride. I'll definitely be back!",
+                "reviewer" : "Emily Rowland",
+                "date" : "28/07/2022"
             }
         ]
     },
@@ -168,32 +304,72 @@
         "imageUrl" : "http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148646/wuruze4x0zayejedrzk3.webp",
         "priceOptions" : [
             {
-                "title" : "Single",
-                "price" : 90,
+                "title" : "Single Day Pass",
+                "price" : 50,
                 "included" : [
-                    "30 min Parasailing ride"
+                    "Day pass for fishing area",
+                    "Bait included"
                 ]
             },
             {
-                "title" : "2 People",
+                "title" : "Single Day Pass + Gear",
                 "price" : 170,
                 "included" : [
-                    "30 min Parasailing ride"
+                    "Day pass for fishing area",
+                    "Bait included",
+                    "Fishing Rod included",
+                    "Fishing Net included"
                 ]
             },
             {
-                "title" : "3 People",
-                "price" : 240,
+                "title" : "Family Day Pass",
+                "price" : 70,
                 "included" : [
-                    "30 min Parasailing ride"
+                    "Day pass for fishing area",
+                    "Bait included",
+                    "Up to 5 Fishing Net included"
+                ]
+            },
+            {
+                "title" : "Family Day Pass + Gear",
+                "price" : 270,
+                "included" : [
+                    "Day pass for fishing area",
+                    "Bait included",
+                    "2 Adult Fishing Rods included",
+                    "Up to 5 Fishing Net included"
                 ]
             }
         ],
         "reviews" : [
             {
                 "stars" : 5,
-                "reviewContent" : "very good",
-                "reviewer" : "Tim Derunn",
+                "reviewContent" : "I had a fantastic time on my fishing trip at the beach! The captain and crew were friendly and knowledgeable, and they knew all the best spots for catching fish. The equipment was top-notch, and we caught a variety of fish, including some big ones! I would highly recommend this service to any fishing enthusiasts.",
+                "reviewer" : "Hope Callaway",
+                "date" : "10/11/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I took my family on a fishing trip at the beach, and it was a great experience! The captain was patient and helpful, and he made sure everyone had a good time. The scenery was beautiful, and we loved seeing the wildlife and marine life up close. We even caught some fish to bring home for dinner!",
+                "reviewer" : "Jordan Simmons",
+                "date" : "10/11/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I'm an experienced angler, and I was impressed by the quality of this fishing trip. The captain and crew were professional and experienced, and they knew exactly where to find the best fish. The equipment was top-of-the-line, and we caught some impressive fish. I would definitely recommend this service to anyone looking for a great fishing experience.",
+                "reviewer" : "Shaun Mendez",
+                "date" : "10/11/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I went on a fishing trip at the beach with some friends, and we had a blast! The captain and crew were friendly and accommodating, and they made sure we had everything we needed for a successful fishing trip. The weather was perfect, and we caught plenty of fish to take home. It was a great way to spend a day at the beach.",
+                "reviewer" : "Marshal hopkins",
+                "date" : "10/11/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I booked a private fishing trip at the beach, and it was a great decision! The captain and crew were attentive and knowledgeable, and they made sure I had a great time. The water was calm and clear, and we caught a variety of fish, including some big ones. It was a unique and memorable experience, and I would definitely do it again.",
+                "reviewer" : "Miles Terry",
                 "date" : "10/11/2022"
             }
         ]
@@ -204,33 +380,50 @@
         "imageUrl" : "http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148732/xamgx1azjqt7mxqnfcyj.webp",
         "priceOptions" : [
             {
-                "title" : "Single",
-                "price" : 90,
+                "title" : "4 courts",
+                "price" : 0,
                 "included" : [
-                    "30 min Parasailing ride"
+                    "4 courts in the sand"
                 ]
             },
             {
-                "title" : "2 People",
-                "price" : 170,
+                "title" : "Private Court - 1 Hour",
+                "price" : 30,
                 "included" : [
-                    "30 min Parasailing ride"
-                ]
-            },
-            {
-                "title" : "3 People",
-                "price" : 240,
-                "included" : [
-                    "30 min Parasailing ride"
+                    "1 Private court in the sand"
                 ]
             }
         ],
         "reviews" : [
             {
                 "stars" : 5,
-                "reviewContent" : "very good",
-                "reviewer" : "Tim Derunn",
-                "date" : "10/11/2022"
+                "reviewContent" : "The public volleyball court at the beach is great for a fun game with friends or family! The court is well-maintained and clean, and there are usually plenty of people around to join in on a game. It's a great way to spend a day at the beach!",
+                "reviewer" : "Maria Cook",
+                "date" : "02/02/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I played volleyball on the public court at the beach, and it was a blast! The court is spacious and well-marked, and there are plenty of nets available. It's a great spot to meet new people and play a friendly game of volleyball.",
+                "reviewer" : "Alisha Gates",
+                "date" : "10/02/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I rented a private volleyball court at the beach for a group event, and it was a fantastic experience! The court was well-maintained and clean, and the staff was friendly and helpful. It was a great way to spend an afternoon with friends and play some competitive volleyball.",
+                "reviewer" : "Ash Taylor",
+                "date" : "10/03/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I played volleyball on the public court at the beach, and it was a great experience! The court is located in a convenient spot, and there are usually plenty of other people around to play with. It's a great way to get some exercise and have fun at the same time.",
+                "reviewer" : "Scott Adderly",
+                "date" : "20/09/2022"
+            },
+            {
+                "stars" : 5,
+                "reviewContent" : "I booked a private volleyball court at the beach for a team-building event, and it was a huge success! The court was spacious and well-maintained, and the staff was accommodating and helpful. It was a great way to build teamwork and have fun in the sun!",
+                "reviewer" : "Benny Ackles",
+                "date" : "02/11/2022"
             }
         ]
     }
