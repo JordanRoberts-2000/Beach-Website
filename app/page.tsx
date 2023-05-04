@@ -1,5 +1,7 @@
+import pageData from '@/Data.json'
 import Image from "next/image"
 import Category from "./Components/Category/Category"
+import InfoSection from "./Components/Category/InfoSection"
 
 export default function Home() {
   return (
@@ -40,12 +42,11 @@ export default function Home() {
     </div>
     <section className="py-4">
         <ul className="flex flex-col gap-4 lg:gap-0 ">
-            <Category imageUrl={"http://res.cloudinary.com/dewhcvhvq/image/upload/v1683146187/bb93xlmuelfchqw3x4p9.webp"}/>
-            <Category imageUrl={"http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148330/whxzhkab41ho8hcqdt7a.webp"}/>
-            <Category imageUrl={"http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148420/jyxsauxhle4cggngitwt.webp"}/>
-            <Category imageUrl={"http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148518/swlzqta7qefbulqxkz2o.webp"}/>
-            <Category imageUrl={"http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148646/wuruze4x0zayejedrzk3.webp"}/>
-            <Category imageUrl={"http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148732/xamgx1azjqt7mxqnfcyj.webp"}/>
+            {pageData.map(({imageUrl, title, subtitle, priceOptions}) => (
+                <Category key={title} imageUrl={imageUrl} title={title} subtitle={subtitle}>
+                    <InfoSection priceOptions={priceOptions}/>
+                </Category>
+            ))}
         </ul>
     </section>
     </>
