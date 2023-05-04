@@ -42,9 +42,9 @@ export default function Home() {
     </div>
     <section className="py-4">
         <ul className="flex flex-col gap-4 lg:gap-0 ">
-            {pageData.map(({imageUrl, title, subtitle, priceOptions}) => (
+            {pageData.map(({imageUrl, title, subtitle, priceOptions, reviews}) => (
                 <Category key={title} imageUrl={imageUrl} title={title} subtitle={subtitle}>
-                    <InfoSection priceOptions={priceOptions}/>
+                    <InfoSection priceOptions={priceOptions} reviews={reviews}/>
                 </Category>
             ))}
         </ul>

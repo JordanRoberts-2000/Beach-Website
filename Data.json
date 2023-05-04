@@ -38,6 +38,20 @@
                     "Inflatables"
                 ]
             }
+        ],
+        "reviews" : [
+            {
+                "stars" : 5,
+                "reviewContent" : "very good",
+                "reviewer" : "Tim Derunn",
+                "date" : "10/11/2022"
+            },
+            {
+                "stars" : 4,
+                "reviewContent" : "alright",
+                "reviewer" : "Tim Derunn II",
+                "date" : "10/11/2022"
+            }
         ]
     },
     {
@@ -65,6 +79,14 @@
                 "included" : [
                     "30 min Parasailing ride"
                 ]
+            }
+        ],
+        "reviews" : [
+            {
+                "stars" : 5,
+                "reviewContent" : "very good",
+                "reviewer" : "Tim Derunn",
+                "date" : "10/11/2022"
             }
         ]
     },
@@ -94,6 +116,14 @@
                     "30 min Parasailing ride"
                 ]
             }
+        ],
+        "reviews" : [
+            {
+                "stars" : 5,
+                "reviewContent" : "very good",
+                "reviewer" : "Tim Derunn",
+                "date" : "10/11/2022"
+            }
         ]
     },
     {
@@ -121,6 +151,14 @@
                 "included" : [
                     "30 min Parasailing ride"
                 ]
+            }
+        ],
+        "reviews" : [
+            {
+                "stars" : 5,
+                "reviewContent" : "very good",
+                "reviewer" : "Tim Derunn",
+                "date" : "10/11/2022"
             }
         ]
     },
@@ -150,9 +188,17 @@
                     "30 min Parasailing ride"
                 ]
             }
+        ],
+        "reviews" : [
+            {
+                "stars" : 5,
+                "reviewContent" : "very good",
+                "reviewer" : "Tim Derunn",
+                "date" : "10/11/2022"
+            }
         ]
     },
-    {
+    {   
         "title" : "VollyBall",
         "subtitle" : "Volume 1",
         "imageUrl" : "http://res.cloudinary.com/dewhcvhvq/image/upload/v1683148732/xamgx1azjqt7mxqnfcyj.webp",
@@ -177,6 +223,14 @@
                 "included" : [
                     "30 min Parasailing ride"
                 ]
+            }
+        ],
+        "reviews" : [
+            {
+                "stars" : 5,
+                "reviewContent" : "very good",
+                "reviewer" : "Tim Derunn",
+                "date" : "10/11/2022"
             }
         ]
     }
