@@ -46,7 +46,7 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
                     }else{
                         clearInterval(scrolling)
                     }
-                },5)
+                },10)
             }
         },400)
     }
@@ -71,7 +71,8 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
                 {/* Info Section */}
                 {children}
             </div>
-            <div className={`${!priceActive ? "translate-x-[-100%]" : "translate-x-0"} duration-200 z-30 absolute bottom-0 left-[-2rem] mb-4 pl-12 py-1 bg-black text-white px-4 text-xl font-playfairDisplay italic`}>
+            <div className={`${!priceActive ? "translate-x-[-100%]" : "translate-x-0"} ${categoryClicked !== title && categoryClicked !== '' && 'opacity-0'}
+                           duration-200 z-30 absolute bottom-0 left-[-2rem] mb-4 pl-12 py-1 bg-black text-white px-4 text-xl font-playfairDisplay italic`}>
                 {`from £${priceOptions[0].price}`}
             </div>
         </li>
