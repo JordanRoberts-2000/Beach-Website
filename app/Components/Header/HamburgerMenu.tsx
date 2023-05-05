@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 
 const variants = { 
-    // errorActive1: { width: ['0rem', '1rem', '1rem', '1rem'], rotate: [0, 0, 0, 45], y: [2], transition: {duration: .6, times: [0, .3]}},
     oneActive: { width: ['2rem'], rotate: 45, y: 10 }, oneInactive: { width: '2rem', },
     twoActive: { width: ['2rem', '0rem'] }, twoInactive: { width: '1.25rem' },
     threeActive: { width: '2rem', rotate: -45, y:-10 }, threeInactive: { width: '1.25rem' }

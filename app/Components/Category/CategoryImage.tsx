@@ -23,8 +23,12 @@ const CategoryImage = ({imageUrl, active}: Props) => {
     useEffect(() => {
         if(active){
             imageRef.current.style.transform = `translate(0, 0) scale(1)`
+            imageRef.current.style.transitionDuration = `700ms`
         }else{
             imageAdjust()
+            setTimeout(() => {
+                imageRef.current.style.transitionDuration = `75ms`
+            },600)
         }
     },[active])
     const pageScroll = () => {
@@ -44,7 +48,7 @@ const CategoryImage = ({imageUrl, active}: Props) => {
     },[])
     return (
         <div ref={imageWrapperRef} className="h-full w-full relative duration-700 overflow-hidden">
-            <Image ref={imageRef} alt="placeholder" fill src={imageUrl} className={`object-cover ${!active ? "scale-150" : "scale-100"} duration-700`}/>
+            <Image ref={imageRef} alt="placeholder" fill src={imageUrl} className={`object-cover scale-150 duration-75`}/>
         </div>
     )
 }
