@@ -1,8 +1,8 @@
 'use client'
 
 import { useStore } from "@/store"
-import Image from "next/image"
 import { useRef, useState } from "react"
+import CategoryImage from "./CategoryImage"
 
 type Props = {
     children: React.ReactNode
@@ -24,7 +24,7 @@ const Category = ({children, imageUrl, title, subtitle}: Props) => {
         <li ref={categoryRef} className={`${!active ? "overflow-hidden aspect-[3/2] w-[95%]" : "w-full aspect-auto h-[100lvh] overflow-scroll"} duration-300 grid mx-auto bg-white lg:grid-cols-2 lg:grid-rows-2`} onClick={() => handleClick()}>
             {/* Image/Gallery */}
             <div className="w-[100%] lg:w-full aspect-[3/2] lg:aspect-auto lg:h-[50vh] mx-auto relative mb-4">
-                <Image alt="placeholder" fill src={imageUrl} className="object-cover"/>
+                <CategoryImage imageUrl={imageUrl}/>
                 <div className="absolute top-0 w-full h-full bg-white/40"></div>
                 <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col text-center">
                     <h3 className="text-4xl font-playfairDisplay font-[600] italic">{title}</h3>
