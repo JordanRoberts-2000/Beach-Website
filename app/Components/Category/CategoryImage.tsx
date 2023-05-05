@@ -4,10 +4,11 @@ import Image from "next/image"
 import { useEffect, useRef } from "react"
 
 type Props = {
-    imageUrl: string
+    imageUrl: string,
+    active: boolean
 }
 
-const CategoryImage = ({imageUrl}: Props) => {
+const CategoryImage = ({imageUrl, active}: Props) => {
     let imageRef = useRef<any>(null)
     let imageWrapperRef = useRef<HTMLDivElement>(null)
     let throttle = useRef(true)
@@ -19,6 +20,13 @@ const CategoryImage = ({imageUrl}: Props) => {
     useEffect(() => {
         imageAdjust()
     },[])
+    useEffect(() => {
+        if(active){
+            imageRef.current.style.transform = `translate(0, 0) scale(1)`
+        }else{
+            imageAdjust()
+        }
+    },[active])
     const pageScroll = () => {
         if(!throttle.current)return
         throttle.current = false
@@ -35,8 +43,8 @@ const CategoryImage = ({imageUrl}: Props) => {
         window.addEventListener('scroll', pageScroll)
     },[])
     return (
-        <div ref={imageWrapperRef} className="h-full w-full relative duration-75">
-            <Image ref={imageRef} alt="placeholder" fill src={imageUrl} className="object-cover scale-150 duration-75"/>
+        <div ref={imageWrapperRef} className="h-full w-full relative duration-300 overflow-hidden">
+            <Image ref={imageRef} alt="placeholder" fill src={imageUrl} className={`object-cover ${!active ? "scale-150" : "scale-100"} duration-300`}/>
         </div>
     )
 }

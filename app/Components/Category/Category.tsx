@@ -25,16 +25,17 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
     const handleClick = () => {
         categoryRef.current!.scrollIntoView({ behavior: "smooth"})
         useStore.setState((set: any) => ({bodyLocked: !set.bodyLocked}))
-        setActive((prev) => !prev)
-        // categoryRef.current!.scrollIntoView()
+        setTimeout(() => {
+            setActive((prev) => !prev)
+        },400)
     }
     let categoryRef = useRef<HTMLLIElement>(null)
     return (
         <li ref={categoryRef} className={`grid bg-white lg:grid-cols-2 lg:grid-rows-2 relative`} onClick={() => handleClick()}>
-            <div className={`${!active ? "overflow-hidden aspect-[3/2] w-[95%]" : "w-full aspect-auto h-[100lvh] overflow-scroll"} duration-75 mx-auto`}>
+            <div className={`${!active ? "overflow-hidden aspect-[3/2] w-[95%]" : "w-full aspect-auto h-[100lvh] overflow-scroll"} duration-500 mx-auto`}>
                 {/* Image/Gallery */}
                 <div className="w-[100%] lg:w-full aspect-[3/2] lg:aspect-auto lg:h-[50vh] mx-auto relative mb-4">
-                    <CategoryImage imageUrl={imageUrl}/>
+                    <CategoryImage imageUrl={imageUrl} active={active}/>
                     <div className="absolute top-0 w-full h-full bg-white/40"></div>
                     <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col text-center">
                         <RiseFade duration={0.6}>
