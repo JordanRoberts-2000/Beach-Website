@@ -21,6 +21,8 @@ type Props = {
 }
 
 const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) => {
+    let categoryRef = useRef<HTMLLIElement>(null)
+    let scrollUpRef = useRef<HTMLDivElement>(null)
     const { categoryClicked } = useStore()
     const [active, setActive] = useState(false)
     const [priceActive, setPriceActive] = useState(true)
@@ -38,21 +40,13 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
             if(!active)setActive((prev) => !prev)
             if(!priceActive)setPriceActive((prev) => !prev)
             if(active){
-                let scrollAmount = 0
-                const scrolling = setInterval(() => {
-                    if(scrollAmount !== 50){
-                        window.scrollBy(0, -1)
-                        scrollAmount = scrollAmount + 1
-                    }else{
-                        clearInterval(scrolling)
-                    }
-                },2)
+                scrollUpRef.current!.scrollIntoView({ behavior: "smooth"})
             }
         },400)
     }
-    let categoryRef = useRef<HTMLLIElement>(null)
     return (
         <li ref={categoryRef} className={`grid bg-white lg:grid-cols-2 lg:grid-rows-2 relative`} onClick={(e) => handleClick(e)}>
+            <div ref={scrollUpRef} className="absolute opacity-0 pointer-events-none top-[-50px] h-[1px] w-full"></div>
             <div className={`${!active ? "overflow-hidden aspect-[3/2] w-[95%]" : "w-full aspect-auto h-[100lvh] overflow-scroll"} mx-auto
             ${categoryClicked !== title && categoryClicked !== '' ? 'opacity-0 duration-200' : 'opacity-100 duration-500'}`}>
                 {/* Image/Gallery */}
