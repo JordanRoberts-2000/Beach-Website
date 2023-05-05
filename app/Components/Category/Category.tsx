@@ -32,17 +32,20 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
         }else{
             useStore.setState(() => ({categoryClicked: title}))
         }
-        categoryRef.current!.scrollIntoView({ behavior: "smooth"})
-        useStore.setState((set: any) => ({bodyLocked: !set.bodyLocked}))
-        if(priceActive)setPriceActive((prev) => !prev)
-        if(active)setActive((prev) => !prev)
         setTimeout(() => {
-            if(!active)setActive((prev) => !prev)
-            if(!priceActive)setPriceActive((prev) => !prev)
-            if(active){
-                scrollUpRef.current!.scrollIntoView({ behavior: "smooth"})
-            }
-        },400)
+            categoryRef.current!.scrollIntoView({ behavior: "smooth"})
+            if(priceActive)setPriceActive((prev) => !prev)
+            if(active)setActive((prev) => !prev)
+            setTimeout(() => {
+                if(!active)setActive((prev) => !prev)
+                if(!priceActive)setPriceActive((prev) => !prev)
+                if(active){
+                    scrollUpRef.current!.scrollIntoView({ behavior: "smooth"})
+                    useStore.setState((set: any) => ({bodyLocked: !set.bodyLocked}))
+                }
+            },400)
+        },10)
+        
     }
     return (
         <li ref={categoryRef} className={`grid bg-white lg:grid-cols-2 lg:grid-rows-2 relative`} onClick={(e) => handleClick(e)}>

@@ -1,4 +1,5 @@
 import React from 'react'
+import ResizableLargeBlock from './ResizableLargeBlock'
 
 const Footer = () => {
   return (
@@ -21,6 +22,7 @@ const Footer = () => {
             </li>
         </ul>
         <span className='text-gray-400 text-xs font-bold mb-4 text-center'>@CopyRight PocahontasBeach2023</span>
+        <ResizableLargeBlock/>
     </footer>
   )
 }
