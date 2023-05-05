@@ -43,8 +43,8 @@ const CategoryImage = ({imageUrl, active}: Props) => {
         window.addEventListener('scroll', pageScroll)
     },[])
     return (
-        <div ref={imageWrapperRef} className="h-full w-full relative duration-300 overflow-hidden">
-            <Image ref={imageRef} alt="placeholder" fill src={imageUrl} className={`object-cover ${!active ? "scale-150" : "scale-100"} duration-300`}/>
+        <div ref={imageWrapperRef} className="h-full w-full relative duration-700 overflow-hidden">
+            <Image ref={imageRef} alt="placeholder" fill src={imageUrl} className={`object-cover ${!active ? "scale-150" : "scale-100"} duration-700`}/>
         </div>
     )
 }

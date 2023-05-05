@@ -22,11 +22,15 @@ type Props = {
 
 const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) => {
     const [active, setActive] = useState(false)
+    const [priceActive, setPriceActive] = useState(true)
     const handleClick = () => {
         categoryRef.current!.scrollIntoView({ behavior: "smooth"})
         useStore.setState((set: any) => ({bodyLocked: !set.bodyLocked}))
+        if(priceActive)setPriceActive((prev) => !prev)
+        if(active)setActive((prev) => !prev)
         setTimeout(() => {
-            setActive((prev) => !prev)
+            if(!active)setActive((prev) => !prev)
+            if(!priceActive)setPriceActive((prev) => !prev)
         },400)
     }
     let categoryRef = useRef<HTMLLIElement>(null)
@@ -49,7 +53,7 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
                 {/* Info Section */}
                 {children}
             </div>
-            <div className="absolute bottom-0 left-[-2rem] mb-4 pl-12 py-1 bg-black text-white px-4 text-xl font-playfairDisplay italic">
+            <div className={`${!priceActive ? "translate-x-[-100%]" : "translate-x-0"} duration-200 z-50 absolute bottom-0 left-[-2rem] mb-4 pl-12 py-1 bg-black text-white px-4 text-xl font-playfairDisplay italic`}>
                 {`from £${priceOptions[0].price}`}
             </div>
         </li>
