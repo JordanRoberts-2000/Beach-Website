@@ -46,7 +46,7 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
                     }else{
                         clearInterval(scrolling)
                     }
-                },5)
+                },2)
             }
         },400)
     }
