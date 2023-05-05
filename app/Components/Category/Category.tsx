@@ -29,7 +29,6 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
     const [priceActive, setPriceActive] = useState(true)
     const handleSelected = () => {
         if(active)return
-        console.log('entering')
         useStore.setState(() => ({
             categoryClicked: title,
             bodyLocked: true
@@ -44,6 +43,7 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
     }
     const handleExit = () => {
         if(!active)return
+        //////////////////////////////// time base on scroll distance
         categoryScrollRef.current!.scrollTo({ top: 0, behavior: 'smooth' })
         setTimeout(() => {
             useStore.setState(() => ({categoryClicked: ""}))
@@ -55,12 +55,12 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
                     useStore.setState((set: any) => ({bodyLocked: false}))
                 }, 200)
             }, 400)
-        }, 300)
+        }, 500)
     }
     return (
         <li ref={categoryRef} className={`grid bg-white lg:grid-cols-2 lg:grid-rows-2 relative`} onClick={() => handleSelected()}>
             <div ref={scrollUpRef} className="absolute opacity-0 pointer-events-none top-[-50px] h-[1px] w-full"></div>
-            <button className={`bg-black ${active ? "opacity-100 pointer-events-auto  duration-300" : "opacity-0 pointer-events-none"} p-2 rounded-full absolute bottom-0 right-0 m-4 z-40`} onClick={() => handleExit()}>
+            <button className={`bg-black ${active ? "opacity-100 pointer-events-auto  duration-300" : "opacity-0 pointer-events-none"} p-2 rounded-full fixed bottom-0 right-0 m-4 z-40`} onClick={() => handleExit()}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="white" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
             <div ref={categoryScrollRef} className={`${!active ? "overflow-hidden aspect-[3/2] w-[95%]" : "w-full aspect-auto h-[100lvh] overflow-scroll"} mx-auto

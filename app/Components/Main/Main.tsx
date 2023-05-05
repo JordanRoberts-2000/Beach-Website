@@ -14,7 +14,7 @@ const Main = () => {
             <h2 className="absolute translate-x-[-50%] left-[50%] top-[40%] backdrop-blur-sm px-4 py-2 font-bold border-black lg:border-4 border-2 whitespace-nowrap lg:text-3xl">Pocahontas Beach</h2>
             <div className="fadeWhite translate-y-[2px] lg:hidden w-full h-6 z-10 mt-auto"></div>
         </div>
-            <p className="ml-4 mr-4 mb-4 font-[800] lg:hidden">
+            <p className="ml-4 mr-4 mb-4 font-medium lg:hidden">
                 We are dedicated to providing you with
                 the best experience possible when planning
                 your next trip to the beach. We offers a wide

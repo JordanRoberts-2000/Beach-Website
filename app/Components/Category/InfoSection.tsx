@@ -48,7 +48,7 @@ const InfoSection = ({priceOptions, reviews}: Props) => {
                 </Fade>
             </div>
             {/* Reviews */}
-            <div className="flex flex-col">
+            <div className="flex flex-col pb-24 px-2">
                 <Fade>
                     <h3 className="font-semibold font-playfairDisplay mx-auto mt-2 italic text-2xl mb-8">Reviews</h3>
                     {reviews.map(({stars, reviewContent, reviewer, date}, index) => (
