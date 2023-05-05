@@ -4,6 +4,7 @@ import { useStore } from "@/store"
 import { useRef, useState } from "react"
 import CategoryImage from "./CategoryImage"
 import { motion } from "framer-motion"
+import RiseFade from "@/utils/components/Animation/RiseFade"
 
 type Props = {
     children: React.ReactNode
@@ -29,16 +30,22 @@ const Category = ({children, imageUrl, title, subtitle}: Props) => {
                 <div className="absolute top-0 w-full h-full bg-white/40"></div>
                 <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col text-center">
                     <div className="overflow-hidden">
-                        <motion.h3 initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.6 }}
+                        {/* <motion.h3 initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.6 }}
                                 variants={{ visible: { opacity: 1, y: 0}, hidden: { opacity: 0, y: 20 } }} 
                                 className="text-4xl font-playfairDisplay font-[600] italic">{title}
-                        </motion.h3>
+                        </motion.h3> */}
+                        <RiseFade duration={0.6}>
+                            <h3 className="text-4xl font-playfairDisplay font-[600] italic">{title}</h3>
+                        </RiseFade>
                     </div>
                     <div className="overflow-hidden">
-                        <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.3, delay: 0.5 }}
-                                variants={{ visible: { opacity: 1}, hidden: { opacity: 0 } }} 
-                                className="text-xl font-playfairDisplay">{title}
-                        </motion.p>
+                        {/* <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}
+                                variants={{ visible: { opacity: 1, y: 0}, hidden: { opacity: 0, y:20} }} 
+                                className="text-xl font-playfairDisplay">{subtitle}
+                        </motion.p> */}
+                        <RiseFade duration={0.6} delay={0.2}>
+                            <p className="text-xl font-playfairDisplay">{subtitle}</p>
+                        </RiseFade>
                     </div>
                 </div>
             </div>

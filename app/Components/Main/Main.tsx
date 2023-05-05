@@ -14,7 +14,8 @@ const Main = () => {
             <h2 className="absolute translate-x-[-50%] left-[50%] top-[40%] backdrop-blur-sm px-4 py-2 font-bold border-black lg:border-4 border-2 whitespace-nowrap lg:text-3xl">Pocahontas Beach</h2>
             <div className="fadeWhite translate-y-[2px] lg:hidden w-full h-6 z-10 mt-auto"></div>
         </div>
-        <p className="mx-4 mb-8 font-medium lg:hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At mollitia nisi numquam! Optio nulla eligendi autem! Doloremque, quod, alias laborum quam repellat sint iusto tempore illo quisquam libero possimus quae.</p>
+        
+        <p className="ml-4 mr-8 mb-8 font-medium lg:hidden">We are dedicated to providing you with the best experience possible when planning your next trip to the beach. We offers a wide range of activities that will make your beach adventure unforgettable.</p>
         {/* Social Links */}
         <div className="flex flex-col lg:absolute lg:bottom-0 lg:right-0 lg:mr-12 lg:mb-16">
             <button className="w-fit bg-black rounded-md px-4 mb-4 text-white py-1 ml-auto mr-2 lg:rounded-none lg:text-3xl lg:font-playfairDisplay lg:font-[600]">See Our Reviews</button>
