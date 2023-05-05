@@ -41,12 +41,12 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
                 let scrollAmount = 0
                 const scrolling = setInterval(() => {
                     if(scrollAmount !== 50){
-                        window.scrollBy(0, -2)
-                        scrollAmount = scrollAmount + 2
+                        window.scrollBy(0, -1)
+                        scrollAmount = scrollAmount + 1
                     }else{
                         clearInterval(scrolling)
                     }
-                },10)
+                },5)
             }
         },400)
     }
