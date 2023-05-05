@@ -22,7 +22,7 @@ const Category = ({children, imageUrl, title, subtitle}: Props) => {
     }
     let categoryRef = useRef<HTMLLIElement>(null)
     return (
-        <li ref={categoryRef} className={`${!active ? "overflow-hidden aspect-[3/2] w-[95%]" : "w-full aspect-auto h-[100lvh] overflow-scroll"} duration-300 grid mx-auto bg-white lg:grid-cols-2 lg:grid-rows-2`} onClick={() => handleClick()}>
+        <motion.li initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once: true}} ref={categoryRef} className={`${!active ? "overflow-hidden aspect-[3/2] w-[95%]" : "w-full aspect-auto h-[100lvh] overflow-scroll"} duration-75 grid mx-auto bg-white lg:grid-cols-2 lg:grid-rows-2`} onClick={() => handleClick()}>
             {/* Image/Gallery */}
             <div className="w-[100%] lg:w-full aspect-[3/2] lg:aspect-auto lg:h-[50vh] mx-auto relative mb-4">
                 <CategoryImage imageUrl={imageUrl}/>
@@ -34,7 +34,7 @@ const Category = ({children, imageUrl, title, subtitle}: Props) => {
             </div>
             {/* Info Section */}
             {children}
-        </li>
+        </motion.li>
     )
 }
 
