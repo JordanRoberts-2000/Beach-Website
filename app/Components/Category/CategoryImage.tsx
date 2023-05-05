@@ -1,7 +1,6 @@
 'use client'
 
 import Image from "next/image"
-import { motion } from "framer-motion"
 import { useEffect, useRef } from "react"
 
 type Props = {
@@ -17,7 +16,7 @@ const CategoryImage = ({imageUrl}: Props) => {
         throttle.current = false
         setTimeout(() => {
             throttle.current = true
-        }, 100)
+        }, 15)
         requestAnimationFrame(() => {
             if(imageWrapperRef.current!.getBoundingClientRect().top <= window.innerHeight && imageWrapperRef.current!.getBoundingClientRect().top >= -imageWrapperRef.current!.getBoundingClientRect().height){
                 let percentagePassed = ((imageWrapperRef.current!.getBoundingClientRect().top - window.innerHeight)*-1)/(window.innerHeight + imageWrapperRef.current!.getBoundingClientRect().height)
