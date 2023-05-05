@@ -48,7 +48,7 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
                 {/* Info Section */}
                 {children}
             </div>
-            <div className="absolute bottom-0 left-[-2rem] mb-4 pl-12 bg-black text-white px-4 text-lg font-playfairDisplay italic">
+            <div className="absolute bottom-0 left-[-2rem] mb-4 pl-12 py-1 bg-black text-white px-4 text-xl font-playfairDisplay italic">
                 {`from £${priceOptions[0].price}`}
             </div>
         </li>

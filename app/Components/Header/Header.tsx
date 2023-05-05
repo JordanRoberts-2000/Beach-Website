@@ -1,14 +1,11 @@
 import CallToAction from './CallToAction'
+import HamburgerMenu from './HamburgerMenu'
 
 const Header = () => {
   return (
     <header className='fixed flex z-50 top-0 w-full py-4 items-center backdrop-blur-sm'>
         {/* Hamburger Menu */}
-        <div className='flex flex-col gap-2 ml-2 lg:hidden'>
-            <div className='h-[2px] bg-black w-8'></div>
-            <div className='h-[2px] bg-black w-5'></div>
-            <div className='h-[2px] bg-black w-5'></div>
-        </div>
+        <HamburgerMenu/>
         <nav className='ml-auto hidden lg:flex'>
             <ul className='flex gap-12 mr-8 font-bold'>
                 <li>FISHING</li>
