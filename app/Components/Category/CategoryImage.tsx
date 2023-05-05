@@ -24,7 +24,7 @@ const CategoryImage = ({imageUrl}: Props) => {
         window.addEventListener('scroll', pageScroll)
     },[])
     return (
-        <div ref={imageWrapperRef} className="h-full w-full relative border-2 border-red-500 duration-75">
+        <div ref={imageWrapperRef} className="h-full w-full relative duration-75">
             <Image ref={imageRef} alt="placeholder" fill src={imageUrl} className="object-cover scale-150 duration-75"/>
         </div>
     )
