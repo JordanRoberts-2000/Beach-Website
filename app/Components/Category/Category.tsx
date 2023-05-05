@@ -21,9 +21,15 @@ type Props = {
 }
 
 const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) => {
+    const { categoryClicked } = useStore()
     const [active, setActive] = useState(false)
     const [priceActive, setPriceActive] = useState(true)
-    const handleClick = () => {
+    const handleClick = (e:any) => {
+        if(categoryClicked !== ""){
+            useStore.setState(() => ({categoryClicked: ""}))
+        }else{
+            useStore.setState(() => ({categoryClicked: title}))
+        }
         categoryRef.current!.scrollIntoView({ behavior: "smooth"})
         useStore.setState((set: any) => ({bodyLocked: !set.bodyLocked}))
         if(priceActive)setPriceActive((prev) => !prev)
@@ -31,12 +37,24 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
         setTimeout(() => {
             if(!active)setActive((prev) => !prev)
             if(!priceActive)setPriceActive((prev) => !prev)
+            if(active){
+                let scrollAmount = 0
+                const scrolling = setInterval(() => {
+                    if(scrollAmount !== 50){
+                        window.scrollBy(0, -2)
+                        scrollAmount = scrollAmount + 2
+                    }else{
+                        clearInterval(scrolling)
+                    }
+                },5)
+            }
         },400)
     }
     let categoryRef = useRef<HTMLLIElement>(null)
     return (
-        <li ref={categoryRef} className={`grid bg-white lg:grid-cols-2 lg:grid-rows-2 relative`} onClick={() => handleClick()}>
-            <div className={`${!active ? "overflow-hidden aspect-[3/2] w-[95%]" : "w-full aspect-auto h-[100lvh] overflow-scroll"} duration-500 mx-auto`}>
+        <li ref={categoryRef} className={`grid bg-white lg:grid-cols-2 lg:grid-rows-2 relative`} onClick={(e) => handleClick(e)}>
+            <div className={`${!active ? "overflow-hidden aspect-[3/2] w-[95%]" : "w-full aspect-auto h-[100lvh] overflow-scroll"} mx-auto
+            ${categoryClicked !== title && categoryClicked !== '' ? 'opacity-0 duration-200' : 'opacity-100 duration-500'}`}>
                 {/* Image/Gallery */}
                 <div className="w-[100%] lg:w-full aspect-[3/2] lg:aspect-auto lg:h-[50vh] mx-auto relative mb-4">
                     <CategoryImage imageUrl={imageUrl} active={active}/>
@@ -53,7 +71,7 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
                 {/* Info Section */}
                 {children}
             </div>
-            <div className={`${!priceActive ? "translate-x-[-100%]" : "translate-x-0"} duration-200 z-50 absolute bottom-0 left-[-2rem] mb-4 pl-12 py-1 bg-black text-white px-4 text-xl font-playfairDisplay italic`}>
+            <div className={`${!priceActive ? "translate-x-[-100%]" : "translate-x-0"} duration-200 z-30 absolute bottom-0 left-[-2rem] mb-4 pl-12 py-1 bg-black text-white px-4 text-xl font-playfairDisplay italic`}>
                 {`from £${priceOptions[0].price}`}
             </div>
         </li>

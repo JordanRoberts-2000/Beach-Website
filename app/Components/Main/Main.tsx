@@ -1,4 +1,3 @@
-import RiseFade from "@/utils/components/Animation/RiseFade"
 import HomeImage from "./HomeImage"
 import MainResize from "./MainResize"
 
