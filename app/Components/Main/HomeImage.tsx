@@ -20,7 +20,9 @@ const HomeImage = () => {
         }, 20)
         requestAnimationFrame(() => {
             let percentage = window.scrollY / imageRef.current!.getBoundingClientRect().height
-            imageRef.current.style.transform = `scale(${1 + (percentage * 1)})`
+            if(percentage < 0)percentage = 0
+            console.log(percentage)
+            imageRef.current.style.transform = `scale(${1 + (percentage * .5)})`
         })
     }
     useEffect(() => {
