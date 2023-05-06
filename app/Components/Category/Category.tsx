@@ -17,10 +17,11 @@ type Props = {
     imageUrl: string,
     title: string,
     subtitle: string,
-    priceOptions: PriceOptions[]
+    priceOptions: PriceOptions[],
+    index: number
 }
 
-const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) => {
+const Category = ({children, imageUrl, title, subtitle, priceOptions, index}: Props) => {
     let categoryRef = useRef<HTMLLIElement>(null)
     let scrollUpRef = useRef<HTMLDivElement>(null)
     let categoryScrollRef = useRef<HTMLDivElement>(null)
@@ -72,10 +73,10 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
                     <CategoryImage imageUrl={imageUrl} active={active}/>
                     <div className="absolute top-0 w-full h-full bg-white/40"></div>
                     <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col text-center">
-                        <RiseFade duration={0.6}>
+                        <RiseFade duration={0.6} delay={index <= 1 ? 1.4 : 0} awaitPreload={index <= 1}>
                             <h3 className="text-4xl font-playfairDisplay font-[600] italic">{title}</h3>
                         </RiseFade>
-                        <RiseFade duration={0.6} delay={0.2}>
+                        <RiseFade duration={0.6} delay={index <= 1 ? 1.5 : 0.2} awaitPreload={index <= 1}>
                             <p className="text-xl font-playfairDisplay">{subtitle}</p>
                         </RiseFade>
                     </div>
