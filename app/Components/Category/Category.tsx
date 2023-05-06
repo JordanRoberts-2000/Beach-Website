@@ -43,7 +43,9 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
     }
     const handleExit = () => {
         if(!active)return
-        //////////////////////////////// time base on scroll distance
+        let scrollDelay = 0
+        if(categoryScrollRef.current!.scrollTop > 0)scrollDelay = 250
+        if(categoryScrollRef.current!.scrollTop > window.innerHeight)scrollDelay = 500
         categoryScrollRef.current!.scrollTo({ top: 0, behavior: 'smooth' })
         setTimeout(() => {
             useStore.setState(() => ({categoryClicked: ""}))
@@ -55,7 +57,7 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions}: Props) =>
                     useStore.setState((set: any) => ({bodyLocked: false}))
                 }, 200)
             }, 400)
-        }, 500)
+        }, scrollDelay)
     }
     return (
         <li ref={categoryRef} className={`grid bg-white lg:grid-cols-2 lg:grid-rows-2 relative`} onClick={() => handleSelected()}>
