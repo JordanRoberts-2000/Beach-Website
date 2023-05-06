@@ -23,7 +23,7 @@ const Main = () => {
             </p>
         {/* Social Links */}
         <div className="flex flex-col lg:absolute lg:bottom-0 lg:right-0 lg:mr-12 lg:mb-16">
-            <button className="w-fit border-2 border-black rounded-sm font-bold px-4 mb-4 py-1 ml-auto mr-2 lg:rounded-none lg:text-3xl lg:font-playfairDisplay lg:font-[600]">See Our Reviews</button>
+            <button className="w-fit border-2 border-black lg:bg-black lg:text-white rounded-sm font-bold px-4 mb-4 py-1 ml-auto mr-2 lg:rounded-none lg:text-3xl lg:font-playfairDisplay lg:font-[600]">See Our Reviews</button>
             <div className="flex pr-4 ml-4 items-center lg:flex-col-reverse lg:items-start lg:ml-0">
                 <ul className="flex gap-8 lg:gap-12 items-center">
                     <li>
