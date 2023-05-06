@@ -26,7 +26,7 @@ const HamburgerMenu = () => {
                 <motion.div animate={active ? "threeActive" : "threeInactive"} variants={variants} className={`h-[2px] bg-black w-5 ${!active && 'mr-3'}`}></motion.div>
             </div>
             <nav className={`${!active ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"} lg:opacity-100 lg:relative lg:bg-white/0 lg:h-auto 
-                            lg:w-auto top-0 fixed h-[100lvh] w-[100%] left-0 bg-white/90 duration-300 lg:ml-auto flex justify-center flex-col lg:flex-row`}>
+                            lg:w-auto top-0 fixed h-[100dvh] w-[100%] left-0 bg-white duration-300 lg:ml-auto flex justify-center flex-col lg:flex-row`}>
                 <ul className='flex gap-12 mt-20 lg:mr-8 font-bold flex-col text-center text-3xl lg:text-base lg:flex-row lg:mt-0 w-fit mx-auto'>
                     <li className="border-b-2 border-black lg:border-none">FISHING</li>
                     <li className="border-b-2 border-black lg:border-none">VOLLYBALL</li>
@@ -35,7 +35,7 @@ const HamburgerMenu = () => {
                     <li className="border-b-2 border-black lg:border-none">SURFING</li>
                     <li className="border-b-2 border-black lg:border-none">SWIMMING</li>
                 </ul>
-                <div className="lg:hidden flex mt-auto gap-4 mx-auto mb-4">
+                <div className="lg:hidden flex gap-4 mx-auto mb-4">
                     <button className="py-1 px-5 border-2 border-black font-bold rounded-md">Location</button>
                     <button className="py-1 px-5 border-2 border-black font-bold rounded-md">Reviews</button>
                     <button className="py-1 px-5 border-2 border-black font-bold rounded-md">Ts & Cs</button>
