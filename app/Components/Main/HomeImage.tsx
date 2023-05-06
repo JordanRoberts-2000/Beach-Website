@@ -25,8 +25,8 @@ const HomeImage = () => {
             let percentage = window.scrollY / imageRef.current!.getBoundingClientRect().height
             if(percentage < 0)percentage = 0
             imageRef.current.style.transform = `scale(${1 + (percentage * .5)})`
-            titleWrapperRef.current!.style.transform = `scale(${1 + (percentage * .10)}) translate(-50%, 0)`
-            subtitleRef.current!.style.transform = `scale(${1 + (percentage * .10)}) translate(-50%, 0)`
+            titleWrapperRef.current!.style.transform = `scale(${1 + (percentage * .15)}) translate(-50%, 0)`
+            subtitleRef.current!.style.transform = `scale(${1 + (percentage * .15)}) translate(-50%, 0)`
         })
     }
     useEffect(() => {
