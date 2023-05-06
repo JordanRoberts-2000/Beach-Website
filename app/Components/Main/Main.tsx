@@ -13,19 +13,22 @@ const Main = () => {
             </h1>
             <h2 className="absolute translate-x-[-50%] left-[50%] top-[25%] font-playfairDisplay lg:backdrop-blur-sm px-4 py-2 font-bold lg:border-black lg:border-4 whitespace-nowrap italic text-3xl">Pocahontas Beach</h2>
             <div className="fadeWhite translate-y-[2px] lg:hidden w-full h-6 z-10 mt-auto"></div>
+            <div className="flex mt-auto gap-4 z-30 mb-16 absolute bottom-0 left-[50%] translate-x-[-50%] w-[70%]">
+                <button className="border-2 text-lg py-1 border-black backdrop-blur-sm flex-1 rounded-sm px-4 font-medium whitespace-nowrap">Book now</button>
+                <button className="bg-black text-lg py-1 text-white rounded-sm flex-1 px-4 font-medium whitespace-nowrap">See Activities</button>
+            </div>
         </div>
-            {/* <p className="ml-4 mr-4 mb-4 font-medium lg:hidden">
-                We are dedicated to providing you with
-                the best experience possible when planning
-                your next trip to the beach. We offers a wide
-                range of activities that will make your beach
-                adventure unforgettable.
-            </p> */}
+        <span className="text-2xl font-playfairDisplay font-[800] ml-4">About</span>
+        <p className="ml-4 mr-4 mb-8 font-medium lg:hidden">
+            We are dedicated to providing you with
+            the best experience possible when planning
+            your next trip to the beach. We offers a wide
+            range of activities that will make your beach
+            adventure unforgettable.
+        </p>
         {/* Social Links */}
         <div className="flex flex-col lg:absolute lg:bottom-0 lg:right-0 lg:mr-12 lg:mb-16">
-        {/* <button className="w-fit border-2 border-black lg:bg-black lg:text-white rounded-sm font-bold px-4 mb-4 py-1 ml-auto mr-2 lg:rounded-none lg:text-3xl lg:font-playfairDisplay lg:font-[600]">Book Now</button> */}
-            <button className="absolute bottom-[6rem] translate-x-[-50%] backdrop-blur-sm shadow-md left-[50%] z-30 w-fit border-2 border-black lg:bg-black lg:text-white rounded-sm font-bold px-4 mb-4 py-1 ml-auto mr-2 lg:rounded-none lg:text-3xl lg:font-playfairDisplay lg:font-[600]">Book Now</button>
-            <button className="absolute bottom-[3rem] translate-x-[-50%] backdrop-blur-sm shadow-md left-[50%] z-30 w-fit border-2 border-black bg-black text-white rounded-sm font-bold px-4 mb-4 py-1 ml-auto mr-2 lg:rounded-none lg:text-3xl lg:font-playfairDisplay lg:font-[600]">See activities</button>
+            <button className="w-fit border-2 border-black lg:bg-black lg:text-white rounded-sm font-bold px-4 mb-4 py-1 ml-auto mr-2 lg:rounded-none lg:text-3xl lg:font-playfairDisplay lg:font-[600]">See Our Reviews</button>
             <div className="flex pr-4 ml-4 items-center lg:flex-col-reverse lg:items-start lg:ml-0">
                 <ul className="flex gap-8 lg:gap-12 items-center">
                     <li>
