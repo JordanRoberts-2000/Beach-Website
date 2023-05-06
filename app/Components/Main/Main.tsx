@@ -18,17 +18,17 @@ const Main = () => {
                 <button className="bg-black shadow-lg py-1 text-white rounded-sm flex-1 px-4 font-bold whitespace-nowrap">Find Us</button>
             </div>
         </div>
-        <span className="text-3xl font-playfairDisplay font-[800] ml-4">About</span>
+        {/* <span className="text-2xl font-[600] ml-4">About</span>
         <p className="ml-4 mr-4 mb-8 font-bold lg:hidden">
             We are dedicated to providing you with
             the best experience possible when planning
             your next trip to the beach. We offers a wide
             range of activities that will make your beach
             adventure unforgettable.
-        </p>
+        </p> */}
         {/* Social Links */}
         <div className="flex flex-col lg:absolute lg:bottom-0 lg:right-0 lg:mr-12 lg:mb-16">
-            <button className="w-fit shadow-lg border-2 border-black lg:bg-black lg:text-white rounded-sm font-bold px-4 mb-4 py-1 ml-auto mr-2 lg:rounded-none lg:text-3xl lg:font-playfairDisplay lg:font-[600]">See Our Reviews</button>
+            {/* <button className="w-fit shadow-lg border-2 border-black lg:bg-black lg:text-white rounded-sm font-bold px-4 mb-4 py-1 ml-auto mr-2 lg:rounded-none lg:text-3xl lg:font-playfairDisplay lg:font-[600]">See Our Reviews</button> */}
             <div className="flex pr-4 ml-4 items-center lg:flex-col-reverse lg:items-start lg:ml-0">
                 <ul className="flex gap-8 lg:gap-12 items-center">
                     <li>
