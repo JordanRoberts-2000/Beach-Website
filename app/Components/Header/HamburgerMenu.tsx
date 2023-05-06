@@ -2,7 +2,7 @@
 
 import { useStore } from "@/store"
 import { motion } from "framer-motion"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const variants = { 
     oneActive: { width: ['1.5rem'], rotate: 45, y: 10 }, oneInactive: { width: '2rem', },
