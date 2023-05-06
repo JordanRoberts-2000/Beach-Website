@@ -11,21 +11,20 @@ const variants = {
 }
 
 const HamburgerMenu = () => {
-    const [active, setActive] = useState(false)
-    const { categoryClicked } = useStore()
+    const { categoryClicked, navActive } = useStore()
     const handleClick = () => {
-        setActive((prev) => !prev)
-        if(!active)useStore.setState((set: any) => ({bodyLocked: true}))
-        if(active && categoryClicked === "")useStore.setState((set: any) => ({bodyLocked: false}))
+        useStore.setState((set: any) => ({navActive: !set.navActive}))
+        if(!navActive)useStore.setState((set: any) => ({bodyLocked: true}))
+        if(navActive && categoryClicked === "")useStore.setState((set: any) => ({bodyLocked: false}))
     }
     return (
         <>
             <div className='flex flex-col gap-2 ml-2 lg:hidden items-center z-10' onClick={() => handleClick()}>
-                <motion.div animate={active ? "oneActive" : "oneInactive"} variants={variants} className='h-[2px] bg-black w-8'></motion.div>
-                <motion.div animate={active ? "twoActive" : "twoInactive"} variants={variants} className={`h-[2px] bg-black w-5 ${!active && 'mr-3'}`}></motion.div>
-                <motion.div animate={active ? "threeActive" : "threeInactive"} variants={variants} className={`h-[2px] bg-black w-5 ${!active && 'mr-3'}`}></motion.div>
+                <motion.div animate={navActive ? "oneActive" : "oneInactive"} variants={variants} className='h-[2px] bg-black w-8'></motion.div>
+                <motion.div animate={navActive ? "twoActive" : "twoInactive"} variants={variants} className={`h-[2px] bg-black w-5 ${!navActive && 'mr-3'}`}></motion.div>
+                <motion.div animate={navActive ? "threeActive" : "threeInactive"} variants={variants} className={`h-[2px] bg-black w-5 ${!navActive && 'mr-3'}`}></motion.div>
             </div>
-            <nav className={`${!active ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"} lg:opacity-100 lg:relative lg:bg-white/0 lg:h-auto 
+            <nav className={`${!navActive ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"} lg:opacity-100 lg:relative lg:bg-white/0 lg:h-auto 
                             lg:w-auto top-0 fixed h-[100dvh] w-[100%] left-0 bg-white duration-300 lg:ml-auto flex justify-between flex-col lg:flex-row`}>
                 <ul className='flex gap-12 mt-20 lg:mr-8 font-bold flex-col text-center text-3xl lg:text-base lg:flex-row lg:mt-0 w-fit mx-auto'>
                     <li className="border-b-2 border-black lg:border-none">FISHING</li>

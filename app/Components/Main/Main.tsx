@@ -2,19 +2,11 @@ import RiseFade from "@/utils/components/Animation/RiseFade"
 import HomeImage from "./HomeImage"
 import MainResize from "./MainResize"
 
-
 const Main = () => {
   return (
     <MainResize>
         <div className="relative h-[35vh] lg:h-full w-full flex mb-2">
             <HomeImage/>
-                <div className="top-[40%] backdrop-blur-sm text-xl font-playfairDisplay italic font-[800] absolute lg:top-20 left-[50%] translate-x-[-50%] lg:text-7xl whitespace-nowrap lg:text-center">
-                    {/* <span className="lg:hidden">--</span> */}
-                    <RiseFade duration={.6} delay={.6} awaitPreload={true}>
-                        <h1>The Best Beach in the<br className="hidden lg:block"/> Sutton West</h1>
-                    </RiseFade>
-                </div>
-            <h2 className="absolute translate-x-[-50%] left-[50%] top-[25%] font-playfairDisplay lg:backdrop-blur-sm px-4 py-2 font-bold lg:border-black lg:border-4 whitespace-nowrap italic text-3xl">Pocahontas Beach</h2>
             <div className="fadeWhite translate-y-[2px] lg:hidden w-full h-6 z-10 mt-auto"></div>
             <div className="absolute bottom-0 left-[50%] translate-x-[-50%] w-[90%]">
                 <RiseFade duration={.6} delay={1} awaitPreload={true}>
