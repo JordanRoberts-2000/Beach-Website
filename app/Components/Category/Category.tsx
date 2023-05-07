@@ -5,6 +5,7 @@ import { useRef, useState } from "react"
 import CategoryImage from "./CategoryImage"
 import { motion } from "framer-motion"
 import RiseFade from "@/utils/components/Animation/RiseFade"
+import Galllery from "./Galllery"
 
 type PriceOptions = {
     title: string,
@@ -70,16 +71,10 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions, index}: Pr
             ${categoryClicked !== title && categoryClicked !== '' ? 'opacity-0 duration-200' : 'opacity-100 duration-500'}`}>
                 {/* Image/Gallery */}
                 <div className="w-[100%] lg:w-full aspect-[3/2] lg:aspect-auto lg:h-[50vh] mx-auto relative mb-4" onClick={() => handleExit()}>
-                    <CategoryImage imageUrl={imageUrl} active={active}/>
+                    <CategoryImage imageUrl={imageUrl} active={active} title={title} subtitle={subtitle} index={index}/>
                     <div className="absolute top-0 w-full h-full bg-white/40"></div>
-                    <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col text-center">
-                        <RiseFade duration={0.6} delay={index <= 1 ? 1.4 : 0} awaitPreload={index <= 1}>
-                            <h3 className="text-4xl font-playfairDisplay font-[600] italic">{title}</h3>
-                        </RiseFade>
-                        <RiseFade duration={0.6} delay={index <= 1 ? 1.5 : 0.2} awaitPreload={index <= 1}>
-                            <p className="text-xl font-playfairDisplay">{subtitle}</p>
-                        </RiseFade>
-                    </div>
+                    
+                    <Galllery active={active}/>
                 </div>
                 {/* Info Section */}
                 {children}

@@ -22,7 +22,7 @@ const InfoSection = ({priceOptions, reviews}: Props) => {
     return (
         <>
              {/* Pricelist */}
-             <div className="row-span-2 bg-[#F4FFFE] lg:bg-white flex flex-col">
+             <div className="row-span-2 flex flex-col">
                 <Fade>
                     <div className="flex">
                         <div className="h-[1px] bg-black flex-1"></div>
@@ -30,18 +30,17 @@ const InfoSection = ({priceOptions, reviews}: Props) => {
                         <div className="h-[1px] bg-black flex-1"></div>
                     </div>
                     {priceOptions.map(({title, included, price}) => (
-                        <div key={title} className="flex flex-col gap-2 pl-2 mb-4">
-                            <h5 className="text-3xl bg-black text-white px-4 w-fit">{title}</h5>
+                        <div key={title} className="flex flex-col gap-2 mb-4">
+                            <h5 className="text-3xl bg-black font-playfairDisplay text-white py-1 px-4 w-fit">{title}</h5>
                             {included.map((data, index) => (
                                 <span key={index} className="text-xl font-playfairDisplay font-[600]">{`- ${data}`}</span>
                             ))}
                             <div className="flex">
-                                <h6 className="text-2xl bg-black text-white px-2 w-fit pr-8">{price !== 0 ? `£${price}` : "Free"}</h6>
+                                <h6 className="text-2xl font-playfairDisplay font-[800] px-2 w-fit pr-8">{price !== 0 ? `£${price}` : "Free"}</h6>
                                 {price !== 0 && <button className="ml-auto mr-2 font-extrabold px-3 border-2 border-black rounded-md">Book now</button>}
                             </div>
                             <div className="flex flex-col gap-2 mx-1">
                                 <div className="h-[1px] bg-black mr-2"></div>
-                                <div className="h-[1px] bg-black mr-8"></div>
                             </div>
                         </div>
                     ))}
