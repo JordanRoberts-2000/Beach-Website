@@ -36,11 +36,11 @@ const InfoSection = ({priceOptions, reviews}: Props) => {
                                 <span key={index} className="text-xl font-playfairDisplay font-[600]">{`- ${data}`}</span>
                             ))}
                             <div className="flex">
-                                <h6 className="text-2xl font-playfairDisplay font-[800] px-2 w-fit pr-8">{price !== 0 ? `£${price}` : "Free"}</h6>
-                                {price !== 0 && <button className="ml-auto mr-2 font-extrabold px-3 border-2 border-black rounded-md">Book now</button>}
+                                <h6 className="text-2xl font-[600] px-2 w-fit pr-8">{price !== 0 ? `£${price}` : "Free"}</h6>
+                                {price !== 0 && <button className="ml-auto mr-2 font-extrabold px-3 border-2 border-black rounded-sm font-playfairDisplay">Book now</button>}
                             </div>
                             <div className="flex flex-col gap-2 mx-1">
-                                <div className="h-[1px] bg-black mr-2"></div>
+                                <div className="h-[2px] bg-black mr-2"></div>
                             </div>
                         </div>
                     ))}

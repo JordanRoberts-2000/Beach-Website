@@ -13,16 +13,22 @@ type PriceOptions = {
     included: string[]
 }
 
+type GalleryImageUrls = {
+    url: string,
+    placeholder: string
+}
+
 type Props = {
     children: React.ReactNode
     imageUrl: string,
     title: string,
     subtitle: string,
     priceOptions: PriceOptions[],
-    index: number
+    index: number,
+    galleryImageUrls: GalleryImageUrls[]
 }
 
-const Category = ({children, imageUrl, title, subtitle, priceOptions, index}: Props) => {
+const Category = ({children, imageUrl, title, subtitle, priceOptions, galleryImageUrls, index}: Props) => {
     let categoryRef = useRef<HTMLLIElement>(null)
     let scrollUpRef = useRef<HTMLDivElement>(null)
     let categoryScrollRef = useRef<HTMLDivElement>(null)
@@ -74,7 +80,7 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions, index}: Pr
                     <CategoryImage imageUrl={imageUrl} active={active} title={title} subtitle={subtitle} index={index}/>
                     <div className="absolute top-0 w-full h-full bg-white/40"></div>
                     
-                    <Galllery active={active}/>
+                    <Galllery active={active} galleryImageUrls={galleryImageUrls}/>
                 </div>
                 {/* Info Section */}
                 {children}
