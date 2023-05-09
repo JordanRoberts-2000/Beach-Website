@@ -24,9 +24,9 @@ const HomeImage = () => {
         requestAnimationFrame(() => {
             let percentage = window.scrollY / imageRef.current!.getBoundingClientRect().height
             if(percentage < 0)percentage = 0
-            imageRef.current.style.transform = `scale(${1 + (percentage * .5)})`
-            titleWrapperRef.current!.style.transform = `scale(${1 + (percentage * .15)}) translate(-50%, 0)`
-            subtitleRef.current!.style.transform = `scale(${1 + (percentage * .15)}) translate(-50%, 0)`
+            imageRef.current.style.transform = `scale(${1.4 - (percentage * .4)})`
+            // titleWrapperRef.current!.style.transform = `scale(${1 - (percentage * .15)}) translate(-50%, 0)`
+            // subtitleRef.current!.style.transform = `scale(${1 - (percentage * .15)}) translate(-50%, 0)`
         })
     }
     useEffect(() => {
@@ -36,7 +36,7 @@ const HomeImage = () => {
         <>
             <div className="overflow-hidden w-full h-full absolute">
                 <Image ref={imageRef} alt="Beach of Pocahontas" priority fill src="http://res.cloudinary.com/dewhcvhvq/image/upload/v1683129665/urkmys4futdbzl0ufu8e.webp" 
-                    className={`${pathname === "/Booking" && "z-40"} object-cover duration-75`} onLoad={() => imageLoaded()}/>
+                    className={`${pathname === "/Booking" && "z-40"} object-cover scale-[1.4] duration-75`} onLoad={() => imageLoaded()}/>
             </div>
             <div className='overflow-hidden'>
                 <div ref={titleWrapperRef} className="top-[40%] backdrop-blur-sm text-xl font-playfairDisplay italic font-[800] absolute lg:top-20 left-[50%] translate-x-[-50%] lg:text-7xl 
