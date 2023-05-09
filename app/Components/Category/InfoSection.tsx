@@ -25,19 +25,17 @@ const InfoSection = ({priceOptions, reviews}: Props) => {
              {/* Pricelist */}
              <div className="row-span-2 flex flex-col">
                 <Fade>
-                    <div className="flex">
+                    <div className="flex translate-y-[-1rem]">
                         <div className="h-[2px] bg-black flex-1"></div>
                         <h3 className="mx-4 font-semibold font-playfairDisplay translate-y-[-50%] italic text-2xl">Price List</h3>
                         <div className="h-[2px] bg-black flex-1"></div>
                     </div>
                     {priceOptions.map(({title, included, price}, index) => (
                         <div key={title} className="flex flex-col gap-2 mb-4 relative">
-                            {(index === 2 || index === 3) && 
-                                <div className="absolute top-[50%] translate-x-[-50%] left-[50%] translate-y-[-50%] w-[100%] h-[85%]">
-                                    <div className="absolute w-full h-full top-0 left-0 bg-white/60 z-10"></div>
-                                    <Image alt={'placeholder'} src={'http://res.cloudinary.com/dewhcvhvq/image/upload/v1683456486/w2afjti98395hn5cwkx7.webp'} fill className="object-cover"/>
-                                </div>
-                            }
+                            <div className="absolute top-[50%] translate-x-[-50%] left-[50%] translate-y-[-50%] w-[100%] h-[85%]">
+                                <div className="absolute w-full h-full top-0 left-0 bg-white/60 z-10"></div>
+                                <Image alt={'placeholder'} src={'http://res.cloudinary.com/dewhcvhvq/image/upload/v1683456486/w2afjti98395hn5cwkx7.webp'} fill className="object-cover"/>
+                            </div>
                             <h5 className="text-3xl bg-black font-playfairDisplay text-white py-1 px-4 w-fit z-10">{title}</h5>
                             <h5 className="font-playfairDisplay font-[800] text-2xl pl-3 w-fit z-10">Includes:</h5>
                             {included.map((data, index) => (
@@ -61,7 +59,7 @@ const InfoSection = ({priceOptions, reviews}: Props) => {
                 <Fade>
                     <div className="flex">
                         <div className="h-[2px] bg-black flex-1"></div>
-                        <h3 className="mx-4 font-semibold font-playfairDisplay translate-y-[-50%] italic text-2xl">Price List</h3>
+                        <h3 className="mx-4 font-semibold font-playfairDisplay translate-y-[-50%] italic text-2xl">Reviews</h3>
                         <div className="h-[2px] bg-black flex-1"></div>
                     </div>
                     {reviews.map(({stars, reviewContent, reviewer, date}, index) => (
