@@ -11,7 +11,7 @@ const Galllery = ({active, galleryImageUrls}: {active: boolean, galleryImageUrls
     <>
         <div className={`${active ? "opacity-100" : "opacity-0"} w-full duration-300 font-bold z-[10] text-xl flex items-center translate-y-[-50%]`}>
             <div className='flex-1 bg-black h-[2px]'></div>
-            <span className=' border-4 px-2 mx-4 border-black'>Gallery</span>
+            <span className="mx-4 font-semibold font-playfairDisplay backdrop-blur-sm italic text-2xl">Gallery</span>
             <div className='flex-1 bg-black h-[2px]'></div>
         </div>
         <div className='flex gap-4 relative overflow-x-scroll px-4 pb-4'>
