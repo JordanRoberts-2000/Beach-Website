@@ -1,6 +1,7 @@
 import RiseFade from "@/utils/components/Animation/RiseFade"
 import HomeImage from "./HomeImage"
 import MainResize from "./MainResize"
+import FindUsButton from "./FindUsButton"
 
 const Main = () => {
   return (
@@ -12,13 +13,7 @@ const Main = () => {
                 <RiseFade duration={.6} delay={.6} awaitPreload={true}>
                     <div className="flex mt-auto gap-12 z-30 mb-16 ">
                         <button className="border-2 font-sm shadow-lg py-1 border-black backdrop-blur-sm flex-1 rounded-sm px-4 font-bold whitespace-nowrap">Book now</button>
-                        <button className="bg-black shadow-lg py-1 text-white rounded-sm flex-1 px-4 font-bold whitespace-nowrap flex gap-2 justify-center items-center">
-                            Find Us
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-5 h-5 mb-1">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                            </svg>
-                        </button>
+                        <FindUsButton/>
                     </div>
                 </RiseFade>
             </div>

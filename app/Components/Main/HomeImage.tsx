@@ -36,12 +36,12 @@ const HomeImage = () => {
         <>
             <div className="overflow-hidden w-full h-full absolute">
                 <Image ref={imageRef} alt="Beach of Pocahontas" priority fill src="http://res.cloudinary.com/dewhcvhvq/image/upload/v1683129665/urkmys4futdbzl0ufu8e.webp" 
-                    className={`${pathname === "/Booking" && "z-40"} object-cover scale-[1.4] duration-300`} onLoad={() => imageLoaded()}/>
+                    className={`${pathname === "/Booking" && "z-40"} object-cover scale-[1.4] duration-75`} onLoad={() => imageLoaded()}/>
             </div>
             <div className='overflow-hidden'>
                 <div ref={titleWrapperRef} className="top-[40%] backdrop-blur-sm text-xl font-playfairDisplay italic font-[800] absolute lg:top-20 left-[50%] translate-x-[-50%] lg:text-7xl 
                                 whitespace-nowrap lg:text-center">
-                    <RiseFade duration={.6} delay={.6} awaitPreload={true}>
+                    <RiseFade duration={.6} delay={.2} awaitPreload={true}>
                         <h1>The Best Beach in the<br className="hidden lg:block"/> Sutton West</h1>
                     </RiseFade>
                 </div>

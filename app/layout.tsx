@@ -5,6 +5,7 @@ import ScrollLock from './Components/ScrollLock'
 import './globals.css'
 import { Playfair_Display } from 'next/font/google'
 import FadeFooter from '@/utils/components/Animation/FadeFooter'
+import FindUsModel from './Components/FindUsModel'
 
 const  playfairDisplay =  Playfair_Display({subsets: ['latin'], weight: ['400','600', '700', '800'],style: ['normal', 'italic'], variable: "--playfairDisplay-font"})
 
@@ -27,6 +28,7 @@ export default function RootLayout({
             <FadeFooter>
                 <Footer/>
             </FadeFooter>
+            <FindUsModel/>
         </ScrollLock>
     </html>
   )

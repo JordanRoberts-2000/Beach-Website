@@ -1,4 +1,5 @@
 import Fade from "@/utils/components/Animation/Fade"
+import RiseFade from "@/utils/components/Animation/RiseFade"
 import Image from "next/image"
 
 type PriceOptions = {
@@ -25,9 +26,9 @@ const InfoSection = ({priceOptions, reviews}: Props) => {
              {/* Pricelist */}
              <div className="row-span-2 flex flex-col">
                 <Fade>
-                    <div className="flex mt-2">
+                    <div className="flex my-2">
                         <div className="h-[2px] bg-black flex-1"></div>
-                        <h3 className="mx-4 font-semibold font-playfairDisplay translate-y-[-50%] italic text-2xl">Price List</h3>
+                        <h3 className="mx-4 font-semibold font-playfairDisplay translate-y-[-50%] italic text-3xl">Price List</h3>
                         <div className="h-[2px] bg-black flex-1"></div>
                     </div>
                     {priceOptions.map(({title, included, price}, index) => (
@@ -41,11 +42,13 @@ const InfoSection = ({priceOptions, reviews}: Props) => {
                             <h5 className="text-3xl bg-black font-playfairDisplay text-white py-1 px-4 w-fit z-10">{title}</h5>
                             <h5 className="font-playfairDisplay font-[800] text-2xl pl-3 w-fit z-10">Includes:</h5>
                             {included.map((data, index) => (
-                                <span key={index} className="text-xl font-playfairDisplay font-[600] ml-2 z-10">{`- ${data}`}</span>
+                                <RiseFade key={index} duration={.6} awaitPreload={false} className="z-10" wrapperClassName="z-10">
+                                    <span className="text-xl font-playfairDisplay font-[600] ml-2 z-10">{`- ${data}`}</span>
+                                </RiseFade>
                             ))}
                             <div className="flex mt-6 z-10">
                                 <h6 className="text-3xl font-playfairDisplay font-[800] px-2 w-fit pr-8">{price !== 0 ? `£${price}` : "Free"}</h6>
-                                {price !== 0 && <button className="ml-auto mr-2 bg-white font-extrabold px-3 border-2 border-black rounded-sm font-playfairDisplay">Book now</button>}
+                                {price !== 0 && <button className="ml-auto mr-2 bg-white shadow font-extrabold px-5 py-1 text-2xl leading-6 border-2 border-black rounded-sm font-playfairDisplay">Book now</button>}
                             </div>
                             {index !== priceOptions.length -1 &&
                                 <div className="flex flex-col gap-2 mx-1">
