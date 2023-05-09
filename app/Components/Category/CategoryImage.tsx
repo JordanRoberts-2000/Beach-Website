@@ -6,13 +6,14 @@ import { useEffect, useRef } from "react"
 
 type Props = {
     imageUrl: string,
+    blurImageUrl?: string,
     active: boolean,
     title: string,
     subtitle: string,
     index: number
 }
 
-const CategoryImage = ({imageUrl, active, title, subtitle, index}: Props) => {
+const CategoryImage = ({imageUrl, active, title, subtitle, blurImageUrl, index}: Props) => {
     let imageRef = useRef<any>(null)
     let imageWrapperRef = useRef<HTMLDivElement>(null)
     let throttle = useRef(true)
@@ -52,7 +53,7 @@ const CategoryImage = ({imageUrl, active, title, subtitle, index}: Props) => {
     },[])
     return (
         <div ref={imageWrapperRef} className="h-full w-full relative duration-700 overflow-hidden">
-            <Image ref={imageRef} alt="placeholder" fill src={imageUrl} className={`object-cover scale-150 duration-75`}/>
+            <Image ref={imageRef} alt="placeholder" priority={index <= 1} fill src={imageUrl} className={`object-cover scale-150 duration-75`} placeholder="blur" blurDataURL={blurImageUrl}/>
             <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col text-center z-20">
                         <RiseFade duration={0.6} delay={index <= 1 ? 1.4 : 0} awaitPreload={index <= 1}>
                             <h3 className="text-4xl font-playfairDisplay font-[600] italic">{title}</h3>
