@@ -18,7 +18,7 @@ type ModelProps = HTMLMotionProps<"div"> & {
 
 const RisingFallingModel = forwardRef<HTMLDivElement ,ModelProps>(({children, className, active, closeButtonRef, ...rest}, ref) => {
     return (
-        <motion.div ref={ref} className={`fixed z-50 w-[100%] h-[100dvh] bg-white/50 left-0 top-0 ${!active && ' pointer-events-none'} opacity-0`}
+        <motion.div ref={ref} className={`fixed z-50 w-[100%] h-[100dvh] bg-white/70 left-0 top-0 ${!active && ' pointer-events-none'} opacity-0`}
                     variants={varients} animate={active ? 'visible' : 'invisible'} {...rest}>
             <motion.div variants={varients} animate={active ? 'active' : 'inactive'} 
                     className={`absolute left-[50%] translate-x-[-50%] translate-y-[100vh] ${className}`}>
@@ -31,7 +31,7 @@ const RisingFallingModel = forwardRef<HTMLDivElement ,ModelProps>(({children, cl
             </button>
             <div className="flex flex-col absolute left-[50%] translate-x-[-50%] bottom-0 fadeWhite w-full pt-6">
                 <div className="lg:hidden flex gap-4 mx-auto mb-4">
-                    <button className="py-1 px-5 font-bold rounded-md h-fit backdrop-blur-sm bg-black text-white border-white border-2">Location</button>
+                    <button className="py-1 px-5 font-bold rounded-md h-fit backdrop-blur-sm bg-black text-white border-black border-2">Location</button>
                     <button className="py-1 px-5 border-2 border-black font-bold rounded-md h-fit backdrop-blur-sm">Reviews</button>
                     <button className="py-1 px-5 border-2 border-black font-bold rounded-md h-fit whitespace-nowrap backdrop-blur-sm">Ts & Cs</button>
                 </div>
