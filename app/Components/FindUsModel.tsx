@@ -13,10 +13,9 @@ const FindUsModel = () => {
         useStore.setState(() => ({findUsModal: false}))
     }
     return (
-        <RisingFallingModel ref={backgroundRef} active={findUsModal} onClick={(e) => exitModel(e)} className='top-[40%] w-[90%] aspect-square bg-white border-white border-4 rounded-md'>
+        <RisingFallingModel ref={backgroundRef} active={findUsModal} onClick={(e) => exitModel(e)} className='top-[40%] w-[90%] aspect-square bg-white border-white border-4 rounded-md' closeButtonRef={closeButtonRef}>
            <iframe className='h-full w-full' loading="lazy" allowFullScreen
                    src="https://www.google.com/maps/embed/v1/view?zoom=16&center=37.8267,-122.4230&key=AIzaSyCYWyEmTQCbkPCiobCV00TsNtcAdPEeJkI"></iframe>
-            <button ref={closeButtonRef} className='top-0 right-0 m-1 absolute bg-white py-1 leading-6 px-8 font-semibold border-2 border-black'>Close</button>
         </RisingFallingModel>
     )
 }
