@@ -17,7 +17,7 @@ type ModelProps = HTMLMotionProps<"div"> & {
 
 const RisingFallingModel = forwardRef<HTMLDivElement ,ModelProps>(({children, className, active, ...rest}, ref) => {
     return (
-        <motion.div ref={ref} className={`fixed z-50 w-[100%] h-[100lvh] bg-black/70 left-0 top-0 ${!active && ' pointer-events-none'} opacity-0`}
+        <motion.div ref={ref} className={`fixed z-50 w-[100%] h-[100lvh] bg-white/50 left-0 top-0 ${!active && ' pointer-events-none'} opacity-0`}
                     variants={varients} animate={active ? 'visible' : 'invisible'} {...rest}>
             <motion.div variants={varients} animate={active ? 'active' : 'inactive'} 
                     className={`absolute left-[50%] translate-x-[-50%] translate-y-[100vh] ${className}`}>

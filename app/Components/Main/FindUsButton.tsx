@@ -4,7 +4,7 @@ import { useStore } from "@/store"
 
 const FindUsButton = () => {
   return (
-    <button onClick={() => useStore.setState(() => ({findUsModal: true}))} className="bg-black shadow-lg py-1 text-white rounded-sm flex-1 px-4 font-bold whitespace-nowrap flex gap-2 justify-center items-center">
+    <button onClick={() => useStore.setState(() => ({findUsModal: true}))} className="bg-black shadow-lg py-1 text-white rounded-sm flex-1 px-4 focus:scale-[.98] font-bold whitespace-nowrap flex gap-2 justify-center items-center">
         Find Us
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="w-5 h-5 mb-1">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
