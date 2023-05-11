@@ -34,12 +34,21 @@ export const emailValidation = (email:string) => {
     return {valid: false, error: 'Email is invalid'}
 }
 
-export const nameValidation = (name: string) => {
+export const singleNameValidation = (name: string) => {
     const spaceCheck = name.match(/\s/)
     if(spaceCheck)return {valid: false, error: 'Cannot use spaces'}
     const valid = name.match(/^[a-zA-Z]+$/)
     if(!valid)return {valid: false, error: 'Only letters are valid'}
     if(name.length < 3)return {valid: false, error: 'Name is too short'}
+    return {valid: true, error: ''}
+}
+
+export const fullNameValidation = (name: string) => {
+    const valid = name.replace(' ', '').match(/^[a-zA-Z\s]*$/)
+    if(!valid)return {valid: false, error: 'Only letters are valid'}
+    const secondName = name.match(/([^\s]+\s)+[^\s]+/g)
+    if(!secondName)return {valid: false, error: 'Only one name, 2 required'}
+    if(name.length < 3)return {valid: false, error: 'Name is not full'}
     return {valid: true, error: ''}
 }
 

@@ -7,7 +7,8 @@ import { twMerge } from 'tailwind-merge'
 type TextInputProps = React.HTMLAttributes<HTMLInputElement> & 
     VariantProps<typeof variants> & {
         HtmlId: string,
-        valid: null | boolean
+        valid: null | boolean,
+        inputType?: string
 }
 
 const variants = cva([
@@ -37,10 +38,10 @@ const variants = cva([
     }
 )
 
-const TextInput = forwardRef<HTMLInputElement, TextInputProps>(({className, HtmlId, variant, valid, size, children, ...rest}, ref) => {
+const TextInput = forwardRef<HTMLInputElement, TextInputProps>(({className, HtmlId, variant, valid, size, inputType, children, ...rest}, ref) => {
     return (
         <div className="relative w-full bg-transparent">
-            <input ref={ref} id={HtmlId} {...rest} className={twMerge(variants({variant, size, valid, className}))}/>
+            <input ref={ref} id={HtmlId} {...rest} className={twMerge(variants({variant, size, valid, className}))} type={inputType || ''}/>
             {children}
         </div>
     )

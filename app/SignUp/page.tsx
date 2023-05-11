@@ -5,6 +5,7 @@ import PasswordValidation from './Components/SignUp/Inputs/PasswordValidation'
 import ReEnterPasswordValidation from './Components/SignUp/Inputs/ReEnterPasswordValidation'
 import Checkbox from '@/utils/components/Inputs/CheckInput'
 import SignUpForm from './Components/SignUp/SignUpForm'
+import Link from 'next/link'
 
 const page = () => {
   return (
@@ -24,7 +25,7 @@ const page = () => {
             </div>
             <div className='mt-6 mx-auto flex gap-2 items-center'>
                 <div className='text-lg font-bold'>Already have an account?</div>
-                <div className='text-xl font-bold translate-y-[-2px] text-blue-600'>Sign in</div>
+                <Link href={'/Booking'} className='text-xl font-bold translate-y-[-2px] text-blue-600'>Sign in</Link>
             </div>
         </div>
     </div>

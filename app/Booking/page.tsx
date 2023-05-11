@@ -20,7 +20,7 @@ const Page = () => {
                 <TextInput refValue={passwordInputRef} validationFunc={ passwordValidation } title={'Password:'} maxLength={20} debounceDuration={200} 
                            tooltip={false} password={false} submitEmpty={false} emtpySetter={null}/>
                 <div className='flex w-[85%] mx-auto mt-2'>
-                    <Checkbox title={"Stay logged in"} refValue={stayLoggedInputRef}/>
+                    <Checkbox title={"Stay logged in"} ref={stayLoggedInputRef}/>
                     <span className='whitespace-nowrap ml-auto text-blue-600'>Forgot Password?</span>
                 </div>
                 <button type='submit' className='bg-black text-white text-xl font-bold py-2 w-[85%] mt-4 mx-auto rounded-md'>Sign In</button>
