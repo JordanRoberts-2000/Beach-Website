@@ -1,3 +1,8 @@
+export type Validation = {
+    valid: boolean,
+    error: string
+}
+
 export const usernameValidation = (username: string) => {
     const spaceCheck = username.match(/\s/)
     if(spaceCheck)return {valid: false, error: 'Cannot use spaces'}

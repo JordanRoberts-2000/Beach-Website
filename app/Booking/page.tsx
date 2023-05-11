@@ -3,6 +3,7 @@
 import { emailValidation, passwordValidation } from '@/utils/Validation/clientsideInputValidation'
 import Checkbox from '@/utils/components/Inputs/CheckInput'
 import TextInput from '@/utils/components/Inputs/TextInput'
+import Link from 'next/link'
 import { SetStateAction, useRef } from 'react'
 
 const Page = () => {
@@ -36,7 +37,7 @@ const Page = () => {
                 <p className='w-[85%] mx-auto mt-2 text-blue-300'>By Signing in you are agreeing to the terms and conditions</p>
                 <div className='mt-6 mx-auto flex gap-2 items-center'>
                     <div className='text-lg font-bold'>Dont have an account?</div>
-                    <div className='text-xl font-bold translate-y-[-2px] text-blue-600'>Register</div>
+                    <Link href={'/SignUp'} className='text-xl font-bold translate-y-[-2px] text-blue-600'>Register</Link>
                 </div>
             </form>
         </div>
