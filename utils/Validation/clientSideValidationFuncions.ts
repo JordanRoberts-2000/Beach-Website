@@ -19,8 +19,9 @@ export const requiredField = (input: string, setValid: React.Dispatch<React.SetS
     if(valid.message !== 'Required' && input.length === 0)setValid({ valid: null, message: 'Required' })
 }
 
-export const requiredValidate = (input: string, setValid: React.Dispatch<React.SetStateAction<InputValid>>, valid: InputValid, validationFunc: (input: string) => Validation) => {
+export const requiredValidate = (input: string, setValid: React.Dispatch<React.SetStateAction<InputValid>>, valid: InputValid, validationFunc?: (input: string) => Validation) => {
     if(valid.message !== 'Required' && input.length === 0)return setValid({ valid: false, message: 'Required' })
+    if(!validationFunc)return
     const result = validationFunc(input)
     if(!result.valid && valid.valid !== false){
         if(valid.valid){
@@ -33,7 +34,11 @@ export const requiredValidate = (input: string, setValid: React.Dispatch<React.S
     }
 }
 
-export const OnChangeValidate = (input: string, validationFunc: (input: string) => Validation, setter: React.Dispatch<React.SetStateAction<InputValid>>, valid: InputValid) => {
+export const OnChangeValidate = (input: string, setter: React.Dispatch<React.SetStateAction<InputValid>>, valid: InputValid, validationFunc?: (input: string) => Validation) => {
+    if(!validationFunc){
+        if(valid.valid !== null)setter({ valid: null, message: valid.message })
+        return
+    }
     const result: Validation = validationFunc(input)
     if(result.valid && valid.valid !== true){
             if(valid.valid === false){

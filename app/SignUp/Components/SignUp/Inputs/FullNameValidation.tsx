@@ -17,13 +17,13 @@ type Props = {
 }
 
 const FullName = ({refValue, valid, setter}: Props) => {
-    let onchangeDebounce = useCallback(debounce((input: string, validationFunc: (input: string) => Validation, setter: React.Dispatch<React.SetStateAction<InputValid>>, valid: InputValid) => OnChangeValidate(input, validationFunc, setter, valid), 200), [])
+    let onchangeDebounce = useCallback(debounce((input: string, setter: React.Dispatch<React.SetStateAction<InputValid>>, valid: InputValid, validationFunc?: (input: string) => Validation) => OnChangeValidate(input, setter, valid, validationFunc), 200), [])
     return (
         <div className='flex flex-col relative'>
             <TextInputLabel HtmlId={'FullName'} className='text-lg font-bold'>Full Name</TextInputLabel>
             <TextInput HtmlId='FullName' ref={refValue} valid={valid.valid} variant={'primary'}
                     className='flex-1 pl-9 bg-gray-100 shadow shadow-teal-500'
-                    onChange={(e: any) => onchangeDebounce(e.target.value, fullNameValidation, setter, valid)} 
+                    onChange={(e: any) => onchangeDebounce(e.target.value, setter, valid, fullNameValidation)} 
                     onBlur={(e:any) => requiredValidate(e.target.value, setter, valid, fullNameValidation)}>
                 <ValidationConfirmation valid={valid.valid} className='right-0 translate-y-[-50%] top-[50%]'/>
                 <ErrorMessage valid={valid.valid} message={valid.message} variant={'topRight'}/>

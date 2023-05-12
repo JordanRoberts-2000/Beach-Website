@@ -18,16 +18,16 @@ type Props = {
 
 const ReEnterPasswordValidation = ({refValue, valid, setter}: Props) => {
     const [hidden, setHidden] = useState(true)
-    let onchangeDebounce = useCallback(debounce((input: string, validationFunc: (input: string) => Validation, setter: React.Dispatch<React.SetStateAction<InputValid>>, valid: InputValid) => OnChangeValidate(input, validationFunc, setter, valid), 200), [])
+    let onchangeDebounce = useCallback(debounce((input: string, setter: React.Dispatch<React.SetStateAction<InputValid>>, valid: InputValid, validationFunc?: (input: string) => Validation) => OnChangeValidate(input, setter, valid, validationFunc), 200), [])
     return (
         <div className='flex flex-col relative'>
             <TextInputLabel HtmlId={'FullName'} className='text-lg font-bold'>Re-enter Password</TextInputLabel>
             <TextInput HtmlId='FullName' ref={refValue} valid={valid.valid} variant={'primary'} inputType={hidden ? 'password' : ''}
                     className='flex-1 pl-9 bg-gray-100 shadow shadow-teal-500'
-                    onChange={(e: any) => onchangeDebounce(e.target.value, passwordValidation, setter, valid)} 
-                    onBlur={(e:any) => requiredValidate(e.target.value, setter, valid, passwordValidation)}>
+                    onChange={(e: any) => onchangeDebounce(e.target.value, setter, valid)} 
+                    onBlur={(e:any) => requiredValidate(e.target.value, setter, valid)}>
                 <ValidationConfirmation valid={valid.valid} className='right-0 translate-y-[-50%] top-[50%]'/>
-                <ErrorMessage valid={valid.valid} message={valid.message} variant={'bottomMiddle'} className='whitespace-nowrap mt-[2px]'/>
+                <ErrorMessage valid={valid.valid} message={valid.message} variant={'topRight'} className='whitespace-nowrap mt-[2px]'/>
                 <InputIcon variant={'insideLeft'}>
                     <button type='button' onClick={() => setHidden((prev) => !prev)} className='mt-1'>
                         {hidden ? 
