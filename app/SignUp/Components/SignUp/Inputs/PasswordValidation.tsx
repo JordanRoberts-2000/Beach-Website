@@ -23,7 +23,7 @@ const PasswordValidation = ({refValue, valid, setter}: Props) => {
         <div className='flex flex-col relative'>
             <TextInputLabel HtmlId={'FullName'} className='text-lg font-bold'>Password</TextInputLabel>
             <TextInput HtmlId='FullName' ref={refValue} valid={valid.valid} variant={'primary'} inputType={hidden ? 'password' : ''}
-                    className='flex-1 pl-9 bg-gray-100 text-lg shadow shadow-teal-500'
+                    className='flex-1 pl-9 bg-gray-100 shadow shadow-teal-500'
                     onChange={(e: any) => onchangeDebounce(e.target.value, passwordValidation, setter, valid)} 
                     onBlur={(e:any) => requiredValidate(e.target.value, setter, valid, passwordValidation)}>
                 <ValidationConfirmation valid={valid.valid} className='right-0 translate-y-[-50%] top-[50%]'/>

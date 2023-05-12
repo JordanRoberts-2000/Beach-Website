@@ -22,7 +22,7 @@ const EmailValidation = ({refValue, valid, setter}: Props) => {
         <div className='flex flex-col relative'>
             <TextInputLabel HtmlId={'First Name'} className='text-lg font-bold'>Email</TextInputLabel>
             <TextInput HtmlId='First Name' ref={refValue} valid={valid.valid} variant={'primary'}
-                    className='flex-1 pl-9 bg-gray-100 text-lg shadow shadow-teal-500'
+                    className='flex-1 pl-9 bg-gray-100 shadow shadow-teal-500'
                     onChange={(e: any) => onchangeDebounce(e.target.value, emailValidation, setter, valid)} 
                     onBlur={(e:any) => requiredValidate(e.target.value, setter, valid, emailValidation)}>
                 <ValidationConfirmation valid={valid.valid} className='right-0 translate-y-[-50%] top-[50%]'/>

@@ -41,7 +41,7 @@ const SignUpForm = () => {
                 <PasswordValidation refValue={passwordInputRef} valid={passwordValid} setter={setPasswordValid}/>
                 <ReEnterPasswordValidation refValue={reEnerPasswordInputRef} valid={reEnterpasswordValid} setter={setReEnterPasswordValid}/>
             </div>
-            <Checkbox title={'Sign up to our newletter'} ref={newletterCheckbox} className='mx-auto mt-6 gap-4'/>
+            <Checkbox title={'Sign up to our newletter'} ref={newletterCheckbox} className='mx-auto mt-2 gap-4'/>
             <div className='mx-auto font-semibold text-sm text-red-600 h-4'>{formErrorMessage}</div>
             <button type='submit' className='bg-black text-white text-xl font-bold py-2 w-[85%] mt-4 mx-auto rounded-md'>Register</button>
         </form>

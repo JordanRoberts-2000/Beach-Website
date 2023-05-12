@@ -7,7 +7,7 @@ import { twMerge } from 'tailwind-merge'
 type TextInputProps = React.HTMLAttributes<HTMLInputElement> & 
     VariantProps<typeof variants> & {
         HtmlId: string,
-        valid: null | boolean,
+        valid?: null | boolean,
         inputType?: string
 }
 
