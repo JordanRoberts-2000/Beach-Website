@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 const MainResize = ({children}: {children: React.ReactNode}) => {
     const pathname = usePathname()
     return (
-        <main className={`${(pathname === "/Booking" || pathname === "/SignUp") && "h-[15vh] overflow-hidden"} w-full lg:h-[100svh] relative`}>
+        <main className={`${(pathname === "/Booking" || pathname === "/SignUp") && "h-[10vh] overflow-hidden"} w-full lg:h-[100svh] relative`}>
             {children}
         </main>
     )

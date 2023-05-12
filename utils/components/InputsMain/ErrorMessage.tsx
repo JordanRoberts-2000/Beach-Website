@@ -8,7 +8,7 @@ type ErrorMessageProps = React.HTMLAttributes<HTMLSpanElement> &
 }
 
 const variants = cva([
-    'absolute', 'text-red-600', 'transition', 'text-sm', 'font-semibold', 'ml-1'
+    'absolute', 'text-red-600', 'transition', 'text-sm', 'font-semibold', 'ml-1', ' duration-1000'
     ], {
         variants: {
             variant: {

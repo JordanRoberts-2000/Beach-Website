@@ -1,15 +1,9 @@
-import React from 'react'
-import EmailValidation from './Components/SignUp/Inputs/EmailValidation'
-import FirstName from './Components/SignUp/Inputs/FullNameValidation'
-import PasswordValidation from './Components/SignUp/Inputs/PasswordValidation'
-import ReEnterPasswordValidation from './Components/SignUp/Inputs/ReEnterPasswordValidation'
-import Checkbox from '@/utils/components/Inputs/CheckInput'
 import SignUpForm from './Components/SignUp/SignUpForm'
 import Link from 'next/link'
 
 const page = () => {
   return (
-    <div className='h-[85vh] flex flex-col'>
+    <div className='h-[90vh] flex flex-col'>
         <h3 className=' translate-y-[calc(-100%-8px)] mx-auto text-3xl font-[600] z-50 font-playfairDisplay'>Register</h3>
         <div className='flex flex-col'>
             <SignUpForm/>
