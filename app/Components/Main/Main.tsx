@@ -6,7 +6,7 @@ import FindUsButton from "./FindUsButton"
 const Main = () => {
   return (
     <MainResize>
-        <div className="relative h-[35vh] lg:h-full w-full flex flex-col">
+        <div className="relative h-[100vh] lg:h-full w-full flex flex-col">
             <HomeImage/>
             <div className="fadeWhite translate-y-[2px] lg:hidden h-6 z-10 absolute bottom-0 w-full"></div>
             <div className="absolute bottom-0 left-[50%] translate-x-[-50%] w-[90%]">

@@ -28,7 +28,7 @@ const GalleryImage = ({url, placeholder, blurImageUrl, sliderRef, index}: Props)
         throttle.current = false
         setTimeout(() => {
             throttle.current = true
-        }, 5)
+        }, 15)
         requestAnimationFrame(() => {
             if(imageWrapperRef.current!.getBoundingClientRect().left <= window.innerWidth && imageWrapperRef.current!.getBoundingClientRect().right >= 0){
                 imageAdjust()

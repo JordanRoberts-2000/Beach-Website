@@ -14,6 +14,7 @@ type Props = {
 }
 
 const CategoryImage = ({imageUrl, active, title, subtitle, blurImageUrl, index}: Props) => {
+    console.log('new heck')
     let imageRef = useRef<any>(null)
     let imageWrapperRef = useRef<HTMLDivElement>(null)
     let throttle = useRef(true)
@@ -38,16 +39,20 @@ const CategoryImage = ({imageUrl, active, title, subtitle, blurImageUrl, index}:
     },[active])
     const pageScroll = () => {
         if(!throttle.current)return
+        console.log('heck scroll')
         throttle.current = false
         setTimeout(() => {
             throttle.current = true
-        }, 2)
+        }, 20)
         requestAnimationFrame(() => {
             if(imageWrapperRef.current!.getBoundingClientRect().top <= window.innerHeight && imageWrapperRef.current!.getBoundingClientRect().top >= -imageWrapperRef.current!.getBoundingClientRect().height){
-                imageAdjust()
+                let percentagePassed = ((imageWrapperRef.current!.getBoundingClientRect().top - window.innerHeight)*-1)/(window.innerHeight + imageWrapperRef.current!.getBoundingClientRect().height)
+                let defaultPosition = (imageWrapperRef.current!.getBoundingClientRect().height * -.25)
+                imageRef.current.style.transform = `translate(0, ${(defaultPosition + (percentagePassed * imageWrapperRef.current!.getBoundingClientRect().height * .5))}px) scale(1.5)`
             }
         })
     }
+   
     useEffect(() => {
         window.addEventListener('scroll', pageScroll)
     },[])

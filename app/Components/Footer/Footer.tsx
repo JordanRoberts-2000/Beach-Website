@@ -3,7 +3,7 @@ import ResizableLargeBlock from './ResizableLargeBlock'
 
 const Footer = () => {
   return (
-    <footer className='flex flex-col bg-zinc-950 text-gray-400'>
+    <footer className='flex flex-col bg-zinc-950 text-gray-400 h-[200vh]'>
         <ul className='flex flex-col text-center text-lg font-bold'>
             <li className='border-y border-gray-400 py-2'>Bookings</li>
             <li className='border-b border-gray-400 py-2'>Reviews</li>
