@@ -41,7 +41,7 @@ const CategoryImage = ({imageUrl, active, title, subtitle, blurImageUrl, index}:
         throttle.current = false
         setTimeout(() => {
             throttle.current = true
-        }, 15)
+        }, 2)
         requestAnimationFrame(() => {
             if(imageWrapperRef.current!.getBoundingClientRect().top <= window.innerHeight && imageWrapperRef.current!.getBoundingClientRect().top >= -imageWrapperRef.current!.getBoundingClientRect().height){
                 imageAdjust()

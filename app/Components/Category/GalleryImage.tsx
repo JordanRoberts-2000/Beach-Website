@@ -28,7 +28,7 @@ const GalleryImage = ({url, placeholder, blurImageUrl, sliderRef, index}: Props)
         throttle.current = false
         setTimeout(() => {
             throttle.current = true
-        }, 15)
+        }, 5)
         requestAnimationFrame(() => {
             if(imageWrapperRef.current!.getBoundingClientRect().left <= window.innerWidth && imageWrapperRef.current!.getBoundingClientRect().right >= 0){
                 imageAdjust()
@@ -39,7 +39,7 @@ const GalleryImage = ({url, placeholder, blurImageUrl, sliderRef, index}: Props)
         sliderRef.current!.addEventListener('scroll', pageScroll)
     },[])
     return (
-        <div ref={imageWrapperRef} className='flex-shrink-0 w-[90%] aspect-video relative overflow-hidden'>
+        <div ref={imageWrapperRef} className='flex-shrink-0 w-[90%] aspect-[5/6] relative overflow-hidden'>
             <Image ref={imageRef} alt={placeholder} loading={index <= 1 ? "eager" : "lazy"} src={url} fill className="object-cover scale-150" sizes="90vw" placeholder="blur" blurDataURL={`${blurImageUrl}`}/>
         </div>
     )
