@@ -79,7 +79,7 @@ const Category = ({children, imageUrl, title, subtitle, priceOptions, galleryIma
             ${categoryClicked !== title && categoryClicked !== '' ? 'opacity-0 duration-200' : 'opacity-100 duration-500'}`}>
                 {/* Image/Gallery */}
                 <div className="w-[100%] lg:w-full aspect-[3/2] lg:aspect-auto lg:h-[50vh] mx-auto relative mb-4" onClick={() => handleExit()}>
-                    <CategoryImage imageUrl={imageUrl} active={active} title={title} subtitle={subtitle} index={index} blurImageUrl={blurImageUrl}/>
+                    <CategoryImage imageUrl={imageUrl} active={active} index={index}/>
                     <div className="absolute top-0 w-full h-full bg-white/40"></div>
                     
                     <Galllery active={active} galleryImageUrls={galleryImageUrls}/>
