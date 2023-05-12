@@ -24,16 +24,18 @@ const CategoryImage = ({imageUrl, active, title, subtitle, blurImageUrl, index}:
         return imageRef.current.style.transform = `translate(0, ${(defaultPosition + (percentagePassed * imageWrapperRef.current!.getBoundingClientRect().height * .5))}px) scale(1.5)`
     }
     useEffect(() => {
-        imageAdjust()
-    },[])
-    useEffect(() => {
+        console.log('pig')
         if(active){
-            imageRef.current.style.transform = `translate(0, 0) scale(1)`
-            imageRef.current.style.transitionDuration = `700ms`
+            requestAnimationFrame(() => {
+                imageRef.current.style.transform = `translate(0, 0) scale(1)`
+                imageRef.current.style.transitionDuration = `700ms`
+            })
         }else{
             imageAdjust()
             setTimeout(() => {
-                imageRef.current.style.transitionDuration = `75ms`
+                requestAnimationFrame(() => {
+                    imageRef.current.style.transitionDuration = `75ms`
+                })
             },600)
         }
     },[active])
@@ -58,7 +60,7 @@ const CategoryImage = ({imageUrl, active, title, subtitle, blurImageUrl, index}:
     },[])
     return (
         <div ref={imageWrapperRef} className="h-full w-full relative duration-700 overflow-hidden">
-            <Image ref={imageRef} alt="placeholder" priority={index <= 1} fill src={imageUrl} className={`object-cover scale-150 duration-75`} placeholder="blur" blurDataURL={blurImageUrl}/>
+            <Image ref={imageRef} alt="placeholder" priority={index <= 1} fill src={imageUrl} className={`object-cover scale-150 duration-75 transition`} placeholder="blur" blurDataURL={blurImageUrl}/>
             <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col text-center z-20">
                 <RiseFade duration={0.6} delay={index <= 1 ? 1.2 : 0} awaitPreload={index <= 1}>
                     <h3 className="text-4xl font-playfairDisplay font-[600] italic">{title}</h3>
