@@ -31,9 +31,9 @@ const Galllery = ({active, galleryImageUrls}: {active: boolean, galleryImageUrls
                 <div className='flex-1 bg-black h-[2px]'></div>
             </div>
             <div ref={slider} className='flex gap-4 relative overflow-x-scroll px-4 pb-4'>
-                {galleryImageUrls.map(({url, placeholder, blurImageUrl}, index) => (
+                {/* {galleryImageUrls.map(({url, placeholder, blurImageUrl}, index) => (
                     <GalleryImage key={index} url={url} index={index} placeholder={placeholder} blurImageUrl={blurImageUrl} sliderRef={slider}/>
-                ))}
+                ))} */}
             </div>
         </>
     )

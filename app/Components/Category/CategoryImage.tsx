@@ -20,7 +20,7 @@ const CategoryImage = ({imageUrl, active, title, subtitle, blurImageUrl, index}:
     const imageAdjust = () => {
         let percentagePassed = ((imageWrapperRef.current!.getBoundingClientRect().top - window.innerHeight)*-1)/(window.innerHeight + imageWrapperRef.current!.getBoundingClientRect().height)
         let defaultPosition = (imageWrapperRef.current!.getBoundingClientRect().height * -.25)
-        imageRef.current.style.transform = `translate(0, ${(defaultPosition + (percentagePassed * imageWrapperRef.current!.getBoundingClientRect().height * .5))}px) scale(1.5)`
+        return imageRef.current.style.transform = `translate(0, ${(defaultPosition + (percentagePassed * imageWrapperRef.current!.getBoundingClientRect().height * .5))}px) scale(1.5)`
     }
     useEffect(() => {
         imageAdjust()
