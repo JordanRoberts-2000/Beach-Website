@@ -31,7 +31,7 @@ const Main = () => {
                     </li>
                 </ul>
                 <div className="h-[2px] flex-1 bg-black mx-4 z-20"></div>
-                <span className="text-2xl font-[800] font-playfairDisplay lg:mb-4 lg:text-3xl lg:bg-black lg:text-white mr-2 backdrop-blur-sm lg:px-4 lg:py-1">Follow Us</span>
+                <span className="text-2xl font-[800] italic font-playfairDisplay lg:mb-4 lg:text-3xl lg:bg-black lg:text-white mr-2 backdrop-blur-sm lg:px-4 lg:py-1">Follow Us</span>
             </RiseFade>
         </div>
         {/* <span className="text-2xl font-[600] ml-4">About</span>

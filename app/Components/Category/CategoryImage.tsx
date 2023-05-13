@@ -26,7 +26,7 @@ const CategoryImage = ({imageUrl, active, title, subtitle, blurImageUrl, index}:
         if(active){
             requestAnimationFrame(() => {
                 imageRef.current.style.transform = `translate(0, 0) scale(1)`
-                imageRef.current.style.transitionDuration = `600ms`
+                imageRef.current.style.transitionDuration = `700ms`
             })
         }else{
             imageAdjust()
@@ -34,7 +34,7 @@ const CategoryImage = ({imageUrl, active, title, subtitle, blurImageUrl, index}:
                 requestAnimationFrame(() => {
                     imageRef.current.style.transitionDuration = `75ms`
                 })
-            },650)
+            },700)
         }
     },[active])
     const pageScroll = () => {
