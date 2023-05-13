@@ -39,8 +39,8 @@ const GalleryImage = ({url, placeholder, blurImageUrl, sliderRef, index}: Props)
         sliderRef.current!.addEventListener('scroll', pageScroll)
     },[])
     return (
-        <div ref={imageWrapperRef} className='flex-shrink-0 w-[90%] aspect-[3/2] relative overflow-hidden'>
-            <Image ref={imageRef} alt={placeholder} loading={index <= 1 ? "eager" : "lazy"} src={url} fill className="object-cover scale-150" sizes="90vw" placeholder="blur" blurDataURL={`${blurImageUrl}`}/>
+        <div ref={imageWrapperRef} className='flex-shrink-0 w-[90%] lg:w-[2rem] aspect-[3/2] lg:aspect-[2/3] relative overflow-hidden'>
+            <Image ref={imageRef} alt={placeholder} loading={index <= 1 ? "eager" : "lazy"} src={url} fill className="object-cover scale-150 lg:!scale-100" sizes="90vw" placeholder="blur" blurDataURL={`${blurImageUrl}`}/>
         </div>
     )
 }

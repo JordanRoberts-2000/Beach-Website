@@ -26,7 +26,7 @@ const HamburgerMenu = () => {
             </div>
             <nav className={`${!navActive ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"} lg:opacity-100 lg:relative lg:bg-white/0 lg:h-auto 
                             lg:w-auto top-0 fixed h-[100dvh] w-[100%] left-0 bg-white duration-300 lg:ml-auto flex justify-between flex-col lg:flex-row`}>
-                <ul className='flex py-6 flex-1 justify-around lg:mr-8 font-bold flex-col text-center text-3xl lg:text-base lg:flex-row lg:mt-0 w-fit mx-auto'>
+                <ul className='flex py-6 lg:py-0 flex-1 justify-around lg:mr-8 font-bold flex-col lg:gap-12 text-center text-3xl lg:text-base lg:flex-row lg:mt-0 w-fit mx-auto'>
                     <li className="border-b-2 border-black lg:border-none">FISHING</li>
                     <li className="border-b-2 border-black lg:border-none">VOLLYBALL</li>
                     <li className="border-b-2 border-black lg:border-none">PARASAILING</li>

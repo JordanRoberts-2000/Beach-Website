@@ -7,7 +7,7 @@ import { useStore } from '@/store'
 const Header = () => {
   const {navActive } = useStore()
   return (
-    <header className={`${navActive ? 'z-[70]' : 'z-50'} fixed flex top-0 w-full py-4 items-center backdrop-blur-sm`}>
+    <header className={`${navActive ? 'z-[70]' : 'z-50'} fixed flex top-0 w-full py-4 lg:py-2 lg:pt-4 items-center backdrop-blur-sm`}>
         {/* Hamburger Menu */}
         <HamburgerMenu/>
         <CallToAction/>

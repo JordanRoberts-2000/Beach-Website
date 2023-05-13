@@ -6,20 +6,20 @@ import Main from './Components/Main/Main'
 
 export default function Home() {
   return (
-    <>
-        <div>
-            <p className="mx-4 mb-8 font-medium lg:block hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At mollitia nisi numquam! Optio nulla eligendi autem! Doloremque, quod, alias laborum quam repellat sint iusto tempore illo quisquam libero possimus quae.</p>
-        </div>
-        <section className="pb-4 bg-white">
+    <div className='flex'>
+        <section className="pb-4 bg-white lg:flex-[9]">
             <ul className="flex flex-col gap-4 lg:gap-0 ">
                 {pageData.map(({imageUrl, title, subtitle, priceOptions, reviews, galleryImageUrls, blurImageUrl}, index) => (
                     <Category key={title} imageUrl={imageUrl} title={title} subtitle={subtitle} priceOptions={priceOptions} 
-                              galleryImageUrls={galleryImageUrls} index={index} blurImageUrl={blurImageUrl}>
+                                galleryImageUrls={galleryImageUrls} index={index} blurImageUrl={blurImageUrl}>
                         <InfoSection priceOptions={priceOptions} reviews={reviews}/>
                     </Category>
                 ))}
             </ul>
         </section>
-    </>
+        <div className='lg:flex-1 hidden bg-blue-100 '>
+
+        </div>
+    </div>
   )
 }
