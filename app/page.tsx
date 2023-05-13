@@ -13,11 +13,10 @@ export default function Home() {
         <section className="pb-4">
             <ul className="flex flex-col gap-4 lg:gap-0 ">
                 {pageData.map(({imageUrl, title, subtitle, priceOptions, reviews, galleryImageUrls, blurImageUrl}, index) => (
-                    (index === 0 &&
                     <Category key={title} imageUrl={imageUrl} title={title} subtitle={subtitle} priceOptions={priceOptions} 
                               galleryImageUrls={galleryImageUrls} index={index} blurImageUrl={blurImageUrl}>
                         <InfoSection priceOptions={priceOptions} reviews={reviews}/>
-                    </Category>)
+                    </Category>
                 ))}
             </ul>
         </section>

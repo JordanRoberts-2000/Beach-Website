@@ -17,6 +17,7 @@ const HomeImage = () => {
     let throttle = useRef(true)
     const pageScroll = () => {
         if(!throttle.current || window.scrollY > imageRef.current!.getBoundingClientRect().height)return
+        if(!imageRef.current)return
         throttle.current = false
         setTimeout(() => {
             throttle.current = true
