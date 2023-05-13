@@ -15,10 +15,10 @@ const HomeImage = () => {
     let titleWrapperRef = useRef<HTMLDivElement>(null)
     let subtitleRef = useRef<HTMLHeadingElement>(null)
     let throttle = useRef(true)
+    let currentPathname = useRef(pathname)
     const pageScroll = () => {
         if(!throttle.current || window.scrollY > imageRef.current!.getBoundingClientRect().height)return
-        if(!imageRef.current)return
-        if(pathname !== '/')return
+        if(!imageRef.current || currentPathname.current !== '/')return
         throttle.current = false
         setTimeout(() => {
             throttle.current = true
@@ -33,7 +33,8 @@ const HomeImage = () => {
     }
     useEffect(() => {
         window.addEventListener('scroll', pageScroll)
-    },[])
+        currentPathname.current = pathname
+    },[pathname])
     return (
         <>
             <div className={`${(pathname === "/Booking" || pathname === "/SignUp") ? "h-[10vh]" : 'h-[35vh]'} overflow-hidden w-full fixed top-0 left-0 -z-50`}>

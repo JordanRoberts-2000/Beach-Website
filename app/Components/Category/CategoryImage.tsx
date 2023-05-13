@@ -34,7 +34,7 @@ const CategoryImage = ({imageUrl, active, title, subtitle, blurImageUrl, index}:
                 requestAnimationFrame(() => {
                     imageRef.current.style.transitionDuration = `75ms`
                 })
-            },600)
+            },650)
         }
     },[active])
     const pageScroll = () => {
