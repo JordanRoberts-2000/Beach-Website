@@ -10,7 +10,7 @@ export default function Home() {
         <div>
             <p className="mx-4 mb-8 font-medium lg:block hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At mollitia nisi numquam! Optio nulla eligendi autem! Doloremque, quod, alias laborum quam repellat sint iusto tempore illo quisquam libero possimus quae.</p>
         </div>
-        <section className="pb-4">
+        <section className="pb-4 bg-white">
             <ul className="flex flex-col gap-4 lg:gap-0 ">
                 {pageData.map(({imageUrl, title, subtitle, priceOptions, reviews, galleryImageUrls, blurImageUrl}, index) => (
                     <Category key={title} imageUrl={imageUrl} title={title} subtitle={subtitle} priceOptions={priceOptions} 

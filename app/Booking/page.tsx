@@ -21,7 +21,7 @@ const Page = () => {
     let stayLoggedInputRef = useRef<HTMLInputElement>(null)
     let onchangeDebounce = useCallback(debounce((input: string, setter: React.Dispatch<React.SetStateAction<InputValid>>, valid: InputValid, validationFunc?: (input: string) => Validation) => OnChangeValidate(input, setter, valid, validationFunc), 200), [])
     return (
-        <div className='h-[90vh] flex flex-col'>
+        <div className='h-[90vh] flex flex-col bg-white'>
             <h3 className=' translate-y-[calc(-100%-8px)] mx-auto text-3xl font-[600] z-[60] font-playfairDisplay'>Sign in</h3>
             <form className='flex flex-col gap-4 mx-8'>
                 <div className='flex flex-col relative'>

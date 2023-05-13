@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const page = () => {
   return (
-    <div className='h-[90vh] flex flex-col pt-2'>
+    <div className='h-[90vh] flex flex-col pt-2 bg-white'>
         <h3 className='fixed left-[50%] translate-x-[-50%] top-[2rem] text-3xl font-[600] z-[60] font-playfairDisplay'>Register</h3>
         <div className='flex flex-col'>
             <SignUpForm/>
