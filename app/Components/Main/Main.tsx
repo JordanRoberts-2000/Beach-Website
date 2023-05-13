@@ -2,6 +2,7 @@ import RiseFade from "@/utils/components/Animation/RiseFade"
 import HomeImage from "./HomeImage"
 import MainResize from "./MainResize"
 import FindUsButton from "./FindUsButton"
+import Link from "next/link"
 
 const Main = () => {
   return (
@@ -12,7 +13,7 @@ const Main = () => {
             <div className="absolute bottom-0 left-[50%] translate-x-[-50%] w-[90%]">
                 <RiseFade duration={.6} delay={.6} awaitPreload={true}>
                     <div className="flex mt-auto gap-12 z-30 mb-16 ">
-                        <button className="border-2 font-sm shadow-lg py-1 border-black backdrop-blur-sm flex-1 rounded-sm px-4 font-bold whitespace-nowrap">Book now</button>
+                        <Link href={'/Booking'} className="border-2 font-sm shadow-lg py-1 text-center border-black backdrop-blur-sm flex-1 rounded-sm px-4 font-bold whitespace-nowrap">Book now</Link>
                         <FindUsButton/>
                     </div>
                 </RiseFade>
@@ -30,7 +31,7 @@ const Main = () => {
                     </li>
                 </ul>
                 <div className="h-[2px] flex-1 bg-black mx-4 z-20"></div>
-                <span className="text-2xl font-[800] font-playfairDisplay lg:mb-4 lg:text-3xl lg:bg-black lg:text-white mr-2 backdrop-blur-sm lg:px-4 lg:py-1">Follow Us</span>
+                <span className="text-2xl font-[800] font-playfairDisplay lg:mb-4 lg:text-3xl lg:bg-black lg:text-white mr-4 backdrop-blur-sm lg:px-4 lg:py-1">Follow Us</span>
             </RiseFade>
         </div>
         {/* <span className="text-2xl font-[600] ml-4">About</span>

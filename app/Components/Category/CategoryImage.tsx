@@ -2,7 +2,7 @@
 
 import RiseFade from "@/utils/components/Animation/RiseFade"
 import Image from "next/image"
-import { useEffect, useRef } from "react"
+import { useEffect, useLayoutEffect, useRef } from "react"
 
 type Props = {
     imageUrl: string,
@@ -22,7 +22,7 @@ const CategoryImage = ({imageUrl, active, title, subtitle, blurImageUrl, index}:
         let defaultPosition = (imageWrapperRef.current!.getBoundingClientRect().height * -.25)
         return imageRef.current.style.transform = `translate(0, ${(defaultPosition + (percentagePassed * imageWrapperRef.current!.getBoundingClientRect().height * .5))}px) scale(1.5)`
     }
-    useEffect(() => {
+    useLayoutEffect(() => {
         if(active){
             requestAnimationFrame(() => {
                 imageRef.current.style.transform = `translate(0, 0) scale(1)`
@@ -34,7 +34,7 @@ const CategoryImage = ({imageUrl, active, title, subtitle, blurImageUrl, index}:
                 requestAnimationFrame(() => {
                     imageRef.current.style.transitionDuration = `75ms`
                 })
-            },700)
+            },650)
         }
     },[active])
     const pageScroll = () => {
