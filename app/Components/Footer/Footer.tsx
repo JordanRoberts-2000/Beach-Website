@@ -1,5 +1,6 @@
 import React from 'react'
 import ResizableLargeBlock from './ResizableLargeBlock'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
         <div className='flex flex-col lg:flex-row lg:items-center lg:pb-1 lg:pt-4'>
             <ul className='flex flex-col text-center text-2xl font-bold lg:flex-row lg:justify-between lg:ml-8 lg:pr-16 font-playfairDisplay lg:flex-1'>
                 <li className='border-y border-gray-400 lg:border-none py-2 lg:underline'>Bookings</li>
-                <li className='border-b border-gray-400 lg:border-none py-2'>Reviews</li>
+                <Link href={'/Reviews'} className='border-b border-gray-400 lg:border-none py-2'>Reviews</Link>
                 <li className='border-b border-gray-400 lg:border-none py-2'>Location</li>
                 <li className='border-b border-gray-400 lg:border-none py-2'>Back To Top</li>
             </ul>
