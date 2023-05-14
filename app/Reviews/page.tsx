@@ -2,14 +2,97 @@
 
 import pageData from '@/Data.json'
 import StarInput from './Components/StarInput'
-import { useState } from 'react'
+import { SetStateAction, useEffect, useState } from 'react'
 import FilterModel from './Components/FilterModel'
 import FilterButton from './Components/FilterButton'
 import { useStore } from '@/store'
 
+type DataArrProps =  { 
+    title: string; 
+    subtitle: string; 
+    imageUrl: string; 
+    blurImageUrl: string; 
+    priceOptions: { 
+        title: string; 
+        price: number; 
+        included: string[] 
+    }[]; 
+    galleryImageUrls: { 
+        url: string; 
+        placeholder: string; 
+        blurImageUrl: string }[]; 
+        reviews: { 
+            stars: number; 
+            reviewContent: string; 
+            reviewer: string; 
+            date: string }[] 
+    }[]
+
 const Page = () => {
     const [startOptions, setStarsOptions] = useState([false,false,false,false,false])
     const [activeActivity, setActiveActivity] = useState(0)
+    const [sortOption, setSortOption] = useState(0)
+    let temp = pageData.map((item)  => {return {...item}})
+        let justReviews = temp.map((item) => {
+           return item.reviews
+        })
+    let ArrayOfSelectedReviews = justReviews.reduce((item, item2) => item.concat(item2))
+    const [dataArr, setDataArr] = useState(ArrayOfSelectedReviews)
+    const starsFilter = (newArr: DataArrProps) => {
+        newArr.map((el) => {
+            let filtered = el.reviews.filter(({reviewContent, reviewer, date, stars}) => {
+                let allowed = startOptions.some((el, i) => {
+                    return el && (i + 1 === stars)
+                })
+                return allowed
+            })
+            el.reviews = filtered
+            return el
+        })
+    }
+    const categoryFilter = (newArr: DataArrProps) => {
+        return newArr.filter((item, index) => {
+            if(index + 1 === activeActivity)return item
+        })
+    }
+    useEffect(() => {
+        let newArr = pageData.map((item)  => {return {...item}})
+        if(activeActivity)newArr = categoryFilter(newArr)
+        if(startOptions.some((el) => {return el}))starsFilter(newArr)
+        let temp = newArr.map((item)  => {return {...item}})
+        let justReviews = temp.map((item) => {
+           return item.reviews
+        })
+        let arrayOfSelectedReviews = justReviews.reduce((item, item2) => item.concat(item2))
+        console.log(sortOption, 'sort option')
+        switch(sortOption){
+            case 0:
+                console.log('wtf', arrayOfSelectedReviews)
+                arrayOfSelectedReviews.sort((a, b) => {
+                    return b.stars - a.stars
+                })
+                break
+            case 1:
+                arrayOfSelectedReviews.sort((a, b) => {
+                    return a.stars - b.stars
+                })
+                break
+            case 2:
+                arrayOfSelectedReviews.sort((a, b) => {
+                    return a.stars - b.stars
+                })
+                break
+            case 3:
+                arrayOfSelectedReviews.sort((a, b) => {
+                    return a.stars - b.stars
+                })
+                break
+            default:
+                break
+        }
+        console.log('whats getting hmm', arrayOfSelectedReviews)
+        setDataArr(arrayOfSelectedReviews)
+    },[activeActivity, startOptions, sortOption])
     return (
         <div className='h-[65vh] bg-white flex flex-col'>
             <div className='flex gap-6 items-center font-bold text-lg pb-2'>
@@ -46,8 +129,7 @@ const Page = () => {
                 </div>
             </div>
             <div className='px-2 py-4 flex-1 overflow-y-auto'>
-            {pageData.map(({reviews}) => (
-                reviews.map(({stars, reviewContent, reviewer, date}, index) => (
+                {dataArr.map(({stars, reviewContent, reviewer, date}, index) => (
                     <div className="flex flex-col" key={index}>
                         <div className="flex gap-1 mb-1">
                             {[...Array(stars)].map((x, i) =>
@@ -57,10 +139,9 @@ const Page = () => {
                         <p className="mr-2 font-bold text-sm"><q>{reviewContent}</q></p>
                         <span className="text-bold text-gray-700 text-xs mb-10"><span className="text-lg font-extrabold"></span>{` ${reviewer}: ${date}`}</span>
                     </div>
-                ))
-            ))}
+                ))}
             </div>
-           <FilterModel active={startOptions} setter={setStarsOptions}/>
+           <FilterModel active={startOptions} setter={setStarsOptions} selectSetter={setSortOption}/>
         </div>
     )
 }

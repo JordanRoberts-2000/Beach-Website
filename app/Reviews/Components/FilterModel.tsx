@@ -4,10 +4,11 @@ import { useStore } from '@/store'
 
 type FilterFormProps =  React.HTMLAttributes<HTMLSpanElement> & {
     active: boolean[],
-    setter: React.Dispatch<React.SetStateAction<boolean[]>>
+    setter: React.Dispatch<React.SetStateAction<boolean[]>>,
+    selectSetter: React.Dispatch<React.SetStateAction<number>>
 }
 
-const FilterModel = ({active, setter}:FilterFormProps) => {
+const FilterModel = ({active, setter, selectSetter}:FilterFormProps) => {
     const { filterModelActive } = useStore()
     return (
         <div className={`${filterModelActive ? 'translate-y-[0]' : 'translate-y-[100%]'} fixed bottom-0 left-0 transition duration-500 w-full pb-4 rounded-t-2xl border-t-2 bg-white border-black flex flex-col`}>
@@ -23,9 +24,11 @@ const FilterModel = ({active, setter}:FilterFormProps) => {
                         <StarInput key={i} index={i} active={active} setter={setter}/>
                     )}
                 </div>
-                <select className='flex-1 px-2 py-2 bg-white pl-8 text-center border-2 border-black font-semibold mx-2 rounded-md'>
-                    <option>Sort by Newest</option>
-                    <option>Sort by Oldest</option>
+                <select onChange={(e) => selectSetter(parseInt(e.target.value))} className='flex-1 px-2 py-2 bg-white pl-8 text-center border-2 border-black font-semibold mx-2 rounded-md'>
+                    <option value={0}>Sort by Highest Rating</option>
+                    <option value={1}>Sort by Lowest Rating</option>
+                    <option value={2}>Sort by Newest</option>
+                    <option value={3}>Sort by Oldest</option>
                 </select>
             </form>
         </div>

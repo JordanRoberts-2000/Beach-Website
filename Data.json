@@ -97,6 +97,24 @@
                 "reviewContent" : "I had an amazing swimming trip at this beach! The waves were perfect for surfing, and the water was warm and inviting. The beach was lively, with plenty of people playing beach volleyball and enjoying the sunshine. I also appreciated the nearby restaurants and cafes for when I needed a break from the water. Overall, a fantastic beach experience!",
                 "reviewer" : "Marty Cruise",
                 "date" : "21/8/2022"
+            },
+            {
+                "stars" : 4,
+                "reviewContent" : "I recently attended a swimming event at the beach and I have to say, I was thoroughly impressed. The organizers did an amazing job of setting up the event and ensuring that everything ran smoothly. The beach itself was beautiful and clean, and the water was crystal clear. The swimming course was challenging but manageable, and the lifeguards were always present and attentive. The event had a great atmosphere, with plenty of spectators cheering on the swimmers. The only reason I'm not giving it five stars is that the changing facilities could have been better. Overall, I had a fantastic time and would definitely attend this event again next year.",
+                "reviewer" : "Philbert Horseman",
+                "date" : "11/5/2022"
+            },
+            {
+                "stars" : 4,
+                "reviewContent" : "I had a great time at the recent swimming event at the beach. The course was well-designed and provided a fun challenge for all the swimmers. The beach was beautiful and the water was the perfect temperature for swimming. The event was well-organized, with plenty of staff on hand to help out and ensure the safety of all participants. The atmosphere was friendly and supportive, with everyone encouraging each other to do their best, however food options were limited",
+                "reviewer" : "Philbert Horseman",
+                "date" : "11/5/2022"
+            },
+            {
+                "stars" : 1,
+                "reviewContent" : "They would not let my rat have a swim even though I offered to pay half as he is only small AND IS NOT A PERSON!!",
+                "reviewer" : "Heinz beenis",
+                "date" : "11/7/2022"
             }
         ]
     },
@@ -184,6 +202,18 @@
                 "stars" : 5,
                 "reviewContent" : "I can't recommend this parasailing service enough! The staff was friendly and knowledgeable, and they went above and beyond to ensure we had a great time. The equipment was top-notch, and we felt completely secure throughout the ride. The views were spectacular, and it was an experience we'll never forget.",
                 "reviewer" : "Amber Louis",
+                "date" : "07/12/2022"
+            },
+            {
+                "stars" : 3,
+                "reviewContent" : "Had a great time and overall was an amazing expirience, however a shark did bite off my leg so mixed feelings",
+                "reviewer" : "Jimmy Chase",
+                "date" : "01/12/2022"
+            },
+            {
+                "stars" : 3,
+                "reviewContent" : "Had good fun, wouldve had more fun but the guy next to me got his lef bitten off by a shark and he was being a bit of a baby about it",
+                "reviewer" : "Benny Claus",
                 "date" : "01/12/2022"
             }
         ]
@@ -304,6 +334,12 @@
                 "reviewContent" : "I took a group surfing lesson with this service, and it was a fantastic experience! The instructor was patient and friendly, and he helped everyone in the group improve their skills. The waves were perfect for beginners, and we all had a great time. I would highly recommend this service to anyone looking to try surfing for the first time.",
                 "reviewer" : "Grace Brody",
                 "date" : "10/10/2022"
+            },
+            {
+                "stars" : 4,
+                "reviewContent" : "I recently completed a surfing beginner course at this beach and I have to say, it was a great experience. The instructors were friendly and knowledgeable, and they made learning to surf a lot of fun. The beach itself was beautiful and the waves were the perfect size for beginners. The equipment provided was good quality and well-maintained. The only reason I'm not giving it five stars is that the class was a bit shorter than I expected, and I would have liked to spend more time practicing. However, I still feel like I learned a lot and would definitely recommend this course to anyone who wants to learn to surf.",
+                "reviewer" : "Mr Smith",
+                "date" : "10/03/2022"
             }
         ]
     },
@@ -407,6 +443,18 @@
                 "reviewContent" : "I'm a seasoned jet skier, and I can confidently say that this beach is one of the best spots for jet skiing! The water is clear and calm, and there's plenty of space to ride without worrying about crowds. The staff was knowledgeable and accommodating, and they made sure I had everything I needed for a great ride. I'll definitely be back!",
                 "reviewer" : "Emily Rowland",
                 "date" : "28/07/2022"
+            },
+            {
+                "stars" : 2,
+                "reviewContent" : "I soon as I fell into the water the instructor spun 130degrees and floored it into my head as I was coming up, He actually did this 3 more times before I made it to shore, these people are not what they seem, keep an eye on them.",
+                "reviewer" : "Elon Jobs",
+                "date" : "10/07/2022"
+            },
+            {
+                "stars" : 4,
+                "reviewContent" : "My Jet ski exploded while I was on it, as I was no longer physically capable of riding the jet ski, my children were given extra time. This was an excellent compromise and the staff were really helpful seaching for peices of me. They werent mean spirited about it either. Fantastic overall",
+                "reviewer" : "Steve Musk",
+                "date" : "10/08/2022"
             }
         ]
     },
@@ -511,6 +559,24 @@
                 "reviewContent" : "I booked a private fishing trip at the beach, and it was a great decision! The captain and crew were attentive and knowledgeable, and they made sure I had a great time. The water was calm and clear, and we caught a variety of fish, including some big ones. It was a unique and memorable experience, and I would definitely do it again.",
                 "reviewer" : "Miles Terry",
                 "date" : "10/11/2022"
+            },
+            {
+                "stars" : 1,
+                "reviewContent" : "I Harpooned a dolphin in his rubbery fat head and I was unlawfully booted from the resort and given a life time ban. OUTRAGOUS!!!",
+                "reviewer" : "Hector Sucre",
+                "date" : "10/12/2022"
+            },
+            {
+                "stars" : 3,
+                "reviewContent" : "After I didnt catch anything I was offered a full refund, these people are soft.",
+                "reviewer" : "Marty Gruff",
+                "date" : "10/08/2022"
+            },
+            {
+                "stars" : 2,
+                "reviewContent" : "I bought this fish experience for my granddaughter and it never arrived!!! been waiting 3 weeks!!! Kept an eye for the postman everyday!! ripped off!! Do NOT buy!! No delivery info on the website!! Keep telling me to come to them on the phone!!!! UNHELPFUL!! ",
+                "reviewer" : "Max martins",
+                "date" : "23/12/2022"
             }
         ]
     },
@@ -592,6 +658,18 @@
                 "reviewContent" : "I booked a private volleyball court at the beach for a team-building event, and it was a huge success! The court was spacious and well-maintained, and the staff was accommodating and helpful. It was a great way to build teamwork and have fun in the sun!",
                 "reviewer" : "Benny Ackles",
                 "date" : "02/11/2022"
+            },
+            {
+                "stars" : 4,
+                "reviewContent" : "Superb, not quite 5 stars as I had the absolute worst time of my life here.",
+                "reviewer" : "Clark Man",
+                "date" : "02/03/2022"
+            },
+            {
+                "stars" : 3,
+                "reviewContent" : "I was having amazing fun on the vollyball untill someone walking past called me chicken legs",
+                "reviewer" : "Man Clark",
+                "date" : "02/05/2022"
             }
         ]
     }
