@@ -5,6 +5,7 @@ export const useStore = create((set) => ({
     imageLoaded: false,
     categoryClicked: '',
     navActive: false,
-    findUsModal: false
+    findUsModal: false,
+    filterModelActive: false
     }
 ))
