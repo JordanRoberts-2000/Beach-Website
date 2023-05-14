@@ -5,20 +5,44 @@ import StarInput from './Components/StarInput'
 import { useState } from 'react'
 import FilterModel from './Components/FilterModel'
 import FilterButton from './Components/FilterButton'
+import { useStore } from '@/store'
 
 const Page = () => {
     const [startOptions, setStarsOptions] = useState([false,false,false,false,false])
+    const [activeActivity, setActiveActivity] = useState(0)
     return (
         <div className='h-[65vh] bg-white flex flex-col'>
             <div className='flex gap-6 items-center font-bold text-lg pb-2'>
                 <FilterButton/>
                 <div className='flex flex-1 overflow-x-auto gap-6'>
-                    <div className='flex-shrink-0'>Swimming</div>
-                    <div className='flex-shrink-0'>Parasailing</div>
-                    <div className='flex-shrink-0'>Surfing</div>
-                    <div className='flex-shrink-0'>Jet skis</div>
-                    <div className='flex-shrink-0'>Fishing</div>
-                    <div className='flex-shrink-0'>Vollyball</div>
+                    <button className={`${activeActivity === 0 && 'text-teal-600'} flex-shrink-0 relative`} onClick={() => setActiveActivity(0)}>
+                        All
+                        <div className={`${activeActivity === 0 ? 'w-full' : 'w-0'} absolute duration-300 bottom-0 left-[50%] translate-x-[-50%] h-[2px] bg-teal-600`}></div>
+                    </button>
+                    <button className={`${activeActivity === 1 && 'text-teal-600'} flex-shrink-0 relative`} onClick={() => setActiveActivity(1)}>
+                        Swimming
+                        <div className={`${activeActivity === 1 ? 'w-full' : 'w-0'} absolute duration-300 bottom-0 left-[50%] translate-x-[-50%] h-[2px] bg-teal-600`}></div>
+                    </button>
+                    <button className={`${activeActivity === 2 && 'text-teal-600'} flex-shrink-0 relative`} onClick={() => setActiveActivity(2)}>
+                        Parasailing
+                        <div className={`${activeActivity === 2 ? 'w-full' : 'w-0'} absolute duration-300 bottom-0 left-[50%] translate-x-[-50%] h-[2px] bg-teal-600`}></div>
+                    </button>
+                    <button className={`${activeActivity === 3 && 'text-teal-600'} flex-shrink-0 relative`} onClick={() => setActiveActivity(3)}>
+                        Surfing
+                        <div className={`${activeActivity === 3 ? 'w-full' : 'w-0'} absolute duration-300 bottom-0 left-[50%] translate-x-[-50%] h-[2px] bg-teal-600`}></div>
+                    </button>
+                    <button className={`${activeActivity === 4 && 'text-teal-600'} flex-shrink-0 relative`} onClick={() => setActiveActivity(4)}>
+                        Jet skis
+                        <div className={`${activeActivity === 4 ? 'w-full' : 'w-0'} absolute duration-300 bottom-0 left-[50%] translate-x-[-50%] h-[2px] bg-teal-600`}></div>
+                    </button>
+                    <button className={`${activeActivity === 5 && 'text-teal-600'} flex-shrink-0 relative`} onClick={() => setActiveActivity(5)}>
+                        Fishing
+                        <div className={`${activeActivity === 5 ? 'w-full' : 'w-0'} absolute duration-300 bottom-0 left-[50%] translate-x-[-50%] h-[2px] bg-teal-600`}></div>
+                    </button>
+                    <button className={`${activeActivity === 6 && 'text-teal-600'} flex-shrink-0 relative`} onClick={() => setActiveActivity(6)}>
+                        Vollyball
+                        <div className={`${activeActivity === 6 ? 'w-full' : 'w-0'} absolute duration-300 bottom-0 left-[50%] translate-x-[-50%] h-[2px] bg-teal-600`}></div>
+                    </button>
                 </div>
             </div>
             <div className='px-2 py-4 flex-1 overflow-y-auto'>

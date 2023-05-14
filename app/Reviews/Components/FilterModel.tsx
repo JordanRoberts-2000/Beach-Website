@@ -23,7 +23,7 @@ const FilterModel = ({active, setter}:FilterFormProps) => {
                         <StarInput key={i} index={i} active={active} setter={setter}/>
                     )}
                 </div>
-                <select className='flex-1 px-2 text-center border-2 border-black font-semibold py-1 mx-2 rounded-md'>
+                <select className='flex-1 px-2 py-2 bg-white pl-8 text-center border-2 border-black font-semibold mx-2 rounded-md'>
                     <option>Sort by Newest</option>
                     <option>Sort by Oldest</option>
                 </select>
