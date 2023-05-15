@@ -24,7 +24,8 @@ type DataArrProps =  {
         reviews: { 
             stars: number; 
             reviewContent: string; 
-            reviewer: string; 
+            reviewer: string;
+            dateCheck?: any;
             date: string }[] 
     }[]
 
@@ -64,34 +65,33 @@ const Page = () => {
            return item.reviews
         })
         let arrayOfSelectedReviews = justReviews.reduce((item, item2) => item.concat(item2))
-        console.log(sortOption, 'sort option')
+        let beforeSort = arrayOfSelectedReviews.map((item)  => {return {...item}})
         switch(sortOption){
             case 0:
-                console.log('wtf', arrayOfSelectedReviews)
-                arrayOfSelectedReviews.sort((a, b) => {
-                    return b.stars - a.stars
-                })
+                setDataArr(beforeSort.sort((a, b) => b.stars - a.stars))
                 break
             case 1:
-                arrayOfSelectedReviews.sort((a, b) => {
-                    return a.stars - b.stars
-                })
+                setDataArr(beforeSort.sort((a, b) => a.stars - b.stars))
                 break
             case 2:
-                arrayOfSelectedReviews.sort((a, b) => {
-                    return a.stars - b.stars
+                let dateVersion = beforeSort.map((el) => {
+                    let date = el.date.split('/')
+                    let numberFromDate = date[2].concat(date[1]).concat(date[0])
+                    return {stars: el.stars, reviewer: el.reviewer, reviewContent: el.reviewContent, date: el.date, dateCheck: numberFromDate}
                 })
+                setDataArr(dateVersion.sort((a:any, b:any) => b.dateCheck - a.dateCheck))
                 break
             case 3:
-                arrayOfSelectedReviews.sort((a, b) => {
-                    return a.stars - b.stars
+                let dateVersion2 = beforeSort.map((el) => {
+                    let date = el.date.split('/')
+                    let numberFromDate = date[2].concat(date[1]).concat(date[0])
+                    return {stars: el.stars, reviewer: el.reviewer, reviewContent: el.reviewContent, date: el.date, dateCheck: numberFromDate}
                 })
+                setDataArr(dateVersion2.sort((a:any, b:any) => a.dateCheck - b.dateCheck))
                 break
             default:
                 break
         }
-        console.log('whats getting hmm', arrayOfSelectedReviews)
-        setDataArr(arrayOfSelectedReviews)
     },[activeActivity, startOptions, sortOption])
     return (
         <div className='h-[65vh] bg-white flex flex-col'>
