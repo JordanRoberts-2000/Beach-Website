@@ -3,11 +3,10 @@ import HomeImage from "./HomeImage"
 import MainResize from "./MainResize"
 import FindUsButton from "./FindUsButton"
 import Link from "next/link"
-import { getServerSession } from "next-auth"
-import authOptions from "@/app/api/auth/[...nextauth]/options"
+// import { getServerSession } from "next-auth"
+// import authOptions from "@/app/api/auth/[...nextauth]/options"
 
 const Main = async () => {
-    const session = await getServerSession(authOptions)
     return (
         <MainResize>
             <div className="relative h-[35vh] lg:h-full w-full flex flex-col">
@@ -16,7 +15,7 @@ const Main = async () => {
                 <div className="absolute bottom-0 left-[50%] translate-x-[-50%] w-[90%] lg:static mt-auto lg:translate-x-0 lg:w-fit lg:ml-[65%]">
                     <RiseFade duration={.6} delay={.6} awaitPreload={true}>
                         <div className="flex mt-auto gap-12 z-30 mb-16 lg:mb-2">
-                            <Link href={session ? '/Booking' : '/SignUp'} className="border-2 font-sm shadow-lg py-1 text-center border-black backdrop-blur-sm flex-1 rounded-sm px-4 font-bold whitespace-nowrap
+                            <Link href={'bookings'} className="border-2 font-sm shadow-lg py-1 text-center border-black backdrop-blur-sm flex-1 rounded-sm px-4 font-bold whitespace-nowrap
                                                     lg:hidden">
                                 Book now
                             </Link>

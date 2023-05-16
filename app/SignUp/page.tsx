@@ -4,7 +4,7 @@ import Link from 'next/link'
 const page = () => {
   return (
     <div className='h-[90vh] flex flex-col pt-2 bg-white relative'>
-        <h3 className='absolute left-[50%] translate-x-[-50%] bottom-[100%] mb-4 text-3xl font-[600] z-[60] font-playfairDisplay'>Register</h3>
+        {/* <h3 className='absolute left-[50%] translate-x-[-50%] bottom-[100%] mb-4 text-3xl font-[600] z-[60] font-playfairDisplay'>Register</h3>
         <div className='flex flex-col'>
             <SignUpForm/>
             <div className='mt-2 mx-auto flex gap-4 justify-center items-center'>
@@ -30,7 +30,7 @@ const page = () => {
                     Continue with Apple
                 </button>
             </div>
-        </div>
+        </div> */}
     </div>
   )
 }
