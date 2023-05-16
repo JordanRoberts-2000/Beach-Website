@@ -6,6 +6,7 @@ import './globals.css'
 import { Playfair_Display } from 'next/font/google'
 import FadeFooter from '@/utils/components/Animation/FadeFooter'
 import FindUsModel from './Components/FindUsModel'
+import AuthProvider from './Components/AuthProvider'
 
 const  playfairDisplay =  Playfair_Display({subsets: ['latin'], weight: ['400','600', '700', '800'],style: ['normal', 'italic'], variable: "--playfairDisplay-font"})
 
@@ -21,15 +22,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${playfairDisplay.variable}`}>
-        <ScrollLock>
-            <Header/>
-            <Main/>
-            {children}
-            <FadeFooter>
-                <Footer/>
-            </FadeFooter>
-            <FindUsModel/>
-        </ScrollLock>
+        <AuthProvider>
+            <ScrollLock>
+                <Header/>
+                <Main/>
+                {children}
+                <FadeFooter>
+                    <Footer/>
+                </FadeFooter>
+                <FindUsModel/>
+            </ScrollLock>
+        </AuthProvider>
     </html>
   )
 }

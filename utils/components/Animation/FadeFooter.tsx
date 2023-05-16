@@ -2,8 +2,11 @@
 
 import { useStore } from "@/store"
 import { motion } from "framer-motion"
+import { useSession } from "next-auth/react"
 
 const FadeFooter = ({children}: {children: React.ReactNode}) => {
+    const { data: session } = useSession()
+    console.log(session, 'session')
     const { categoryClicked } = useStore()
     return (
         <motion.div initial={{opacity: 0}} animate={categoryClicked === "" ? "visible" : "hidden"} 
